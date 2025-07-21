@@ -1,0 +1,15 @@
+{
+  // uncomment entries once all libraries have been installed via 'npm install'
+  "eslint.validate": [
+    // "cds",
+    // "csn",
+    // "csv",
+    // "csv (semicolon)",
+    // "tab",
+    // "tsv"
+  ],
+  "SAP HANA Database Explorer.ShowXsAdvancedConnections": true,
+  "SAP HANA Project Explorer.bind.confirm automatic undeployment": false,
+  "SAP HANA SQLScript LSP.URL": "https://cf-us10-001.cf.hana-tooling.ingress.orchestration.prod-us10.hanacloud.ondemand.com/hrtt-service",
+  "SAP HANA SQLScript LSP.XsAdvancedHrttServiceUrl": ""
+}

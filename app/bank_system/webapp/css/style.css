@@ -1,0 +1,37 @@
+/* Enter your custom styles here */
+
+.txt0{
+    font-size: xx-large;
+}
+
+.vbox1{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+
+.title0{
+    font-size: x-large;
+    font-family: math;
+}
+
+.hbox1{
+    background-color: antiquewhite;
+}
+
+.vbox0{
+    background-image: url('../image/backprofile.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.avt1{
+    top: 25px;
+    left: 30px;
+}
+
+#__data12{
+    width: 15%;
+}

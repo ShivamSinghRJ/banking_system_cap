@@ -1,0 +1,6 @@
+<mvc:View controllerName="banksystem.controller.View4"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m">
+    <Page id="page4" title="{i18n>title}">
+    </Page>
+</mvc:View>

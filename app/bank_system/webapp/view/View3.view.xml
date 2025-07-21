@@ -1,0 +1,55 @@
+<mvc:View xmlns:core="sap.ui.core" controllerName="banksystem.controller.View1"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m"
+    xmlns:tnt="sap.tnt">
+    <Page id="page3" title="{i18n>title}" showHeader="false" >
+
+        <HBox >
+            <VBox width="25%" height="100%" class="sapUiSmallMargin" >
+                <HBox  class="sapUiLargeMarginBottom" >
+                        <Image  class="sapUiTinyMarginEnd" src="image/cube.png" width="40px" height="40px"></Image>
+                        <Title  class="txt0" text="Horizon" level="H1"></Title>
+                </HBox>
+                <SearchField width="80%" class="sapUiSmallMargin" placeholder="Search" />
+               
+                <tnt:SideNavigation  >
+                    <tnt:NavigationList  >
+                        <tnt:NavigationListItem text="Home" icon="sap-icon://home" />
+                        <tnt:NavigationListItem text="My Bank" icon="sap-icon://paid-leave" />
+                        <tnt:NavigationListItem text="Transaction History" icon="sap-icon://course-book" />
+                        <tnt:NavigationListItem text="Payment Transfer" icon="sap-icon://money-bills" />
+                        <tnt:NavigationListItem text="Connect Bank" icon="sap-icon://monitor-payments" />
+                    </tnt:NavigationList>
+                </tnt:SideNavigation>
+            </VBox>
+
+            <VBox width="50%"></VBox>
+
+            <VBox  width="25%">
+            <VBox class="vbox0" alignItems="Start" justifyContent="End" width="100%" height="40%" >
+             <Avatar displayShape="Circle" initials="SK" displaySize="M" tooltip="Profile Avatar" class="avt1"> </Avatar>
+            </VBox>
+
+            <Title text="Shivam Kumar" level="H1"></Title>
+            <Text text="shivam.t.kumar@capgemini.com"></Text>
+
+            <HBox >
+                <Text text="My Bank"></Text>
+                <Button text="+ Add bank" type="Transparent"></Button>
+            </HBox>
+
+            <Title text="My budgets"></Title>
+
+         
+                <HBox alignItems="Center" height="15%" >
+                    <core:Icon src="sap-icon://my-view" class="sapUiTinyMarginEnd" backgroundColor="RED" width="20%" height="25%"></core:Icon>
+                    <ProgressIndicator percentValue="40" displayValue="Subscriptions" showValue="true" state="Information" width="80%" />
+                </HBox>
+        
+           
+            </VBox>
+        </HBox>
+
+
+    </Page>
+</mvc:View>

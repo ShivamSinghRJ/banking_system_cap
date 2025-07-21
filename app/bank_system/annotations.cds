@@ -1,0 +1,1 @@
+using ShivamService as service from '../../srv/admin-service';

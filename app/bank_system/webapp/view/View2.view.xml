@@ -1,0 +1,102 @@
+<mvc:View controllerName="banksystem.controller.View2"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m">
+    <Page id="page2" title="{i18n>title}">
+        <ScrollContainer id="_IDGenScrollContainer" vertical="true" horizontal="false" height="100%">
+
+        <VBox id="_IDGenVBox7" class="vbox1 sapUiSmallMargin" height="100%"  >
+            <HBox id="_IDGenHBox1" width="50%" justifyContent="Center">
+                <VBox id="_IDGenVBox8" justifyContent="Center">
+                <HBox id="_IDGenHBox5" class="sapUiSmallMarginBottom">
+                    <Image id="_IDGenImage1" class="sapUiTinyMarginEnd" src="image/cube.png" width="40px" height="40px" />
+                    <Title id="_IDGenTitle1" class="txt0" text="Horizon" level="H1" />
+                </HBox>
+                <Title id="_IDGenTitle3" class="title0" text="Sign up" level="H1" />
+                <Text id="_IDGenText5" class="sapUiSmallMarginBottom" text="Please enter your details" />
+
+                <HBox id="_IDGenHBox8" class="sapUiSmallMarginBottom">
+                    <VBox id="_IDGenVBox13" class="sapUiSmallMarginEnd">
+                        <Text id="_IDGenText10" text="First Name" />
+                        <Input id="_IDGenInput4" type="Text" />
+                    </VBox>
+
+                    <VBox id="_IDGenVBox14" >
+                        <Text id="_IDGenText11" text="Last Name" />
+                        <Input id="_IDGenInput5" type="Text" />
+                    </VBox>
+                </HBox>
+
+                <VBox id="_IDGenVBox15" class="sapUiSmallMarginBottom">
+                    <Text id="_IDGenText12" text="Address" />
+                    <Input id="_IDGenInput6" type="Text" />
+                </VBox>
+
+               
+
+                <HBox id="_IDGenHBox9" class="sapUiSmallMarginBottom">
+                    <VBox id="_IDGenVBox16" class="sapUiSmallMarginEnd">
+                        <Text id="_IDGenText13" text="City" />
+                        <Input id="_IDGenInput7" type="Text" />
+                    </VBox>
+
+                    <VBox id="_IDGenVBox17" >
+                        <Text id="_IDGenText14" text="Phone Number" />
+                        <Input id="_IDGenInput8" type="Tel" />
+                    </VBox>
+                </HBox>
+
+                <HBox id="_IDGenHBox10" class="sapUiSmallMarginBottom">
+                    <VBox id="_IDGenVBox18" class="sapUiSmallMarginEnd">
+                        <Text id="_IDGenText15" text="State" />
+                        <Input id="_IDGenInput9" type="Text" />
+                    </VBox>
+
+                    <VBox id="_IDGenVBox19" >
+                        <Text id="_IDGenText16" text="Postal Code" />
+                        <Input id="_IDGenInput10" type="Text" />
+                    </VBox>
+                </HBox>
+
+                <HBox id="_IDGenHBox11" class="sapUiSmallMarginBottom">
+                    <VBox id="_IDGenVBox20" class="sapUiSmallMarginEnd">
+                        <Text id="_IDGenText17" text="Date of Birth" />
+                        <Input id="_IDGenInput11" type="Text" />
+                    </VBox>
+
+                    <VBox id="_IDGenVBox21" >
+                        <Text id="_IDGenText18" text="SSN" />
+                        <Input id="_IDGenInput12" type="Number" />
+                    </VBox>
+                </HBox>
+
+
+                <VBox id="_IDGenVBox9" class="sapUiSmallMarginBottom">
+                    <Text id="_IDGenText6" text="Email" />
+                    <Input id="_IDGenInput2" type="Email" />
+                </VBox>
+
+                <VBox id="_IDGenVBox10" class="sapUiSmallMarginBottom">
+                    <Text id="_IDGenText7" text="Password" />
+                    <Input id="_IDGenInput3" type="Password" />
+                </VBox>
+
+                <Button id="_IDGenButton3" text="Sign Up" press="signUp" type="Emphasized" width="100%" class="sapUiSmallMarginBottom" />
+
+                <HBox id="_IDGenHBox6" alignItems="Center">
+                    <Text id="_IDGenText8" class="sapUiSmallMarginEnd" text="Already have an account?" />
+                    <Button id="_IDGenButton4" text="Login" type="Transparent" press="login" />
+                </HBox>
+                </VBox>
+                <VBox id="_IDGenVBox11" />
+            </HBox>
+
+            <HBox id="_IDGenHBox7" class="hbox1" width="50%" justifyContent="Center" alignItems="Center">
+                <VBox id="_IDGenVBox12" class="sapUiSmallMargin">
+                <Text id="_IDGenText9" text=" We are so excited to have you here.If you haven't already, create an account to get access to exclusive offers, rewards, and discounts." />
+                <Button id="_IDGenButton5" text="Already have an account? Login." type="Transparent" press="login" />
+                </VBox>
+            </HBox>
+            </VBox>
+    </ScrollContainer>
+    </Page>
+</mvc:View>
