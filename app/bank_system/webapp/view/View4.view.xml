@@ -1,6 +1,78 @@
-<mvc:View controllerName="banksystem.controller.View4"
+<mvc:View controllerName="banksystem.controller.View4" 
     xmlns:mvc="sap.ui.core.mvc"
-    xmlns="sap.m">
-    <Page id="page4" title="{i18n>title}">
+    xmlns="sap.m"
+    xmlns:tnt="sap.tnt"
+    xmlns:table="sap.ui.table" 
+    xmlns:core="sap.ui.core">
+    <Page id="page4" title="{i18n>title}" showHeader="false">
+
+    <HBox id="_IDGenHBox19">
+        <VBox id="_IDGenVBox29" width="21%" height="100%">
+            <HBox id="_IDGenHBox20" class="sapUiLargeMarginBottom">
+            <Image id="_IDGenImage4" class="sapUiTinyMarginEnd" src="image/cube.png" width="40px" height="40px" />
+            <Title id="_IDGenTitle8" class="txt0" text="Horizon" level="H1" />
+            </HBox>
+
+            <SearchField id="_IDGenSearchField1" width="80%" class="sapUiSmallMargin" placeholder="Search" />
+
+            <VBox id="_IDGenVBox30">
+            <Button id="_IDGenButton7" text="Home" icon="sap-icon://home" type="Transparent" textDirection="LTR" width="45%" class="btn0" />
+            <Button id="_IDGenButton13" text="My Bank" icon="sap-icon://home" type="Emphasized" width="51%" press="Onbank" class="btn0" />
+            <Button id="_IDGenButton14" text="Transaction History" icon="sap-icon://home" type="Transparent" width="75%" press="history" class="btn0" />
+            <Button id="_IDGenButton15" text="Payment Transfer" icon="sap-icon://home" type="Transparent" width="71%" class="btn0" />
+            <Button id="_IDGenButton16" text="Connect Bank" icon="sap-icon://home" type="Transparent" width="62%" class="btn0" />
+            </VBox>
+        </VBox>
+
+        <VBox id="_IDGenVBox31" width="79%" class="sapUiTinyMarginEnd">
+
+        <Title id="_IDGenTitle11" text="My Bank Accounts" level="H1" class="sapUiLargeMarginTop sapUiLargeMarginStart"></Title>
+        <!-- <Text text="My Bank Accounts"></Text> -->
+        <Text id="_IDGenText24" text="Effortsly manages your banking accounts" class="sapUiSmallMarginStart sapUiLargeMarginEnd"></Text>
+
+        <Label id="_IDGenLabel1" text="Your cards" design="Bold" class="sapUiLargeMarginTop"></Label>
+
+      
+
+            <HBox id="_IDGenHBox21"
+                wrap="Wrap"
+                justifyContent="Start"
+                items="{/cards}"
+                class="sapUiMediumMarginBottom" backgroundDesign="Transparent">
+
+                <items>
+                    <VBox id="_IDGenVBox32" width="250px" class="sapUiSmallMarginEnd sapUiSmallMarginBottom sapUiResponsiveMargin">
+                    <ObjectListItem id="_IDGenObjectListItem"
+                        title="{bank}" class="hbox2">
+                        <attributes>
+                        <ObjectAttribute id="_IDGenObjectAttribute" text="{name}"/>
+                        <ObjectAttribute id="_IDGenObjectAttribute1" text="{expiry}" />
+                        <ObjectAttribute id="_IDGenObjectAttribute2" text="{number}" />
+                        </attributes>
+                    </ObjectListItem>
+                    </VBox>
+                </items>
+
+                </HBox>
+         
+        </VBox>
+
+
+        </HBox>
+
+        <footer>
+        <Toolbar id="_IDGenToolbar3" width="260px" design="Transparent">
+            <content>
+            <HBox id="_IDGenHBox24">
+                <Avatar id="_IDGenAvatar3" displayShape="Circle" initials="SK" displaySize="XS" tooltip="Profile Avatar" class="sapUiTinyMarginEnd avt2" />
+                <VBox id="_IDGenVBox36">
+                <Title id="_IDGenTitle13" text="Shivam Kumar" level="H3" class="tit1" />
+                <Text id="_IDGenText46" text="shivam.t.kumar@capgemini.com" class="txt3" />
+                </VBox>
+            </HBox>
+            </content>
+        </Toolbar>
+        </footer>
+
     </Page>
 </mvc:View>

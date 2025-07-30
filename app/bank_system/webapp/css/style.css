@@ -32,6 +32,29 @@
     left: 30px;
 }
 
-#__data12{
-    width: 15%;
+#link1{
+    padding-left: 160px;
+}
+
+.avt2{
+    font-size: 12px;
+}
+
+.txt3{
+    font-size: 10px;
+}
+
+.hbox2{
+    background-image: url('https://www.etg.solutions/wp-content/uploads/2018/03/atm-banner.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+   border-radius: 5%;
+   font-size: larger;
+   font-weight: bolder;
+}
+
+
+.btn0{
+    margin-left: 10px;
 }

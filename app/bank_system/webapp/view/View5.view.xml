@@ -1,0 +1,90 @@
+<mvc:View controllerName="banksystem.controller.View5"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m"
+    xmlns:tnt="sap.tnt"
+    xmlns:table="sap.ui.table" 
+    xmlns:core="sap.ui.core">
+    <Page id="page5" title="{i18n>title}">
+        <HBox id="_IDGenHBox22">
+            <VBox id="_IDGenVBox33" width="21%" height="100%">
+                <HBox id="_IDGenHBox23" class="sapUiLargeMarginBottom">
+                <Image id="_IDGenImage5" class="sapUiTinyMarginEnd" src="image/cube.png" width="40px" height="40px" />
+                <Title id="_IDGenTitle10" class="txt0" text="Horizon" level="H1" />
+                </HBox>
+
+                <SearchField id="_IDGenSearchField2" width="80%" class="sapUiSmallMargin" placeholder="Search" />
+
+                <VBox id="_IDGenVBox34" class="sapUiSmallMarginStart">
+                <Button id="_IDGenButton17" text="Home" icon="sap-icon://home" type="Transparent" textDirection="LTR" width="45%" class="btn0" />
+                <Button id="_IDGenButton18" text="My Bank" icon="sap-icon://home" type="Transparent" width="51%" press="Onbank" class="btn0" />
+                <Button id="_IDGenButton19" text="Transaction History" icon="sap-icon://home" type="Emphasized" width="75%" press="history" class="btn0" />
+                <Button id="_IDGenButton20" text="Payment Transfer" icon="sap-icon://home" type="Transparent" width="71%" class="btn0" />
+                <Button id="_IDGenButton21" text="Connect Bank" icon="sap-icon://home" type="Transparent" width="62%" class="btn0" />
+                </VBox>
+            </VBox>
+
+            <VBox id="_IDGenVBox35" width="79%" class="sapUiTinyMarginEnd">
+                <Title id="_IDGenTitle12" text="Transaction History" level="H1" class="sapUiLargeMarginTop sapUiLargeMarginStart" />
+                <Text id="_IDGenText34" text="Gain Insight and Track Your Transactions Over Time" class="sapUiSmallMarginStart sapUiLargeMarginEnd" />
+                <Label id="_IDGenLabel2" text="Transaction History" design="Bold" class="sapUiLargeMarginTop" />
+
+               
+                 <VBox id="_IDGenVBox37"  >
+                            <Toolbar id="_IDGenToolbar4"  >
+                            <content>
+                            <ToolbarSpacer id="_IDGenToolbarSpacer1" ></ToolbarSpacer>
+                               	<ComboBox id="_IDGenComboBox1"  placeholder="Select Bank Name"
+                                    >
+                                    <core:Item id="_IDGenItem3"  key="HDFC" text="HDFC" />
+                                     <core:Item id="_IDGenItem4"  key="ICIC" text="ICIC" />
+                                     <core:Item id="_IDGenItem5"  key="IDFC" text="IDFC" />
+                                </ComboBox>
+                            </content>
+                            </Toolbar>
+
+
+                            <Table id="_IDGenTable1" growing="true" growingThreshold="8" growingScrollToLoad="true"  >
+                                <columns>
+                                <Column id="_IDGenColumn5"  > <Text id="_IDGenText36"  text="Transaction"></Text></Column>
+                                <Column id="_IDGenColumn6"  > <Text id="_IDGenText37" text="Amount"></Text></Column>
+                                <Column id="_IDGenColumn7"  > <Text id="_IDGenText38" text="Status"></Text></Column>
+                                <Column id="_IDGenColumn8"  > <Text id="_IDGenText39"  text="Date"></Text></Column>
+                                <Column id="_IDGenColumn9"  > <Text id="_IDGenText40"  text="Category"></Text></Column>
+                                </columns>
+
+                                <items>
+                                <ColumnListItem id="_IDGenColumnListItem1"  >
+                                    <cells>
+                                    <Text id="_IDGenText41"  text="Transaction"></Text>
+                                    <Text id="_IDGenText42"  text="Transaction"></Text>
+                                   <tnt:InfoLabel id="_IDGenInfoLabel"  text="Success" renderMode="Narrow" colorScheme="4"/>
+                                    <Text id="_IDGenText43" text="Transaction"></Text>
+                                   
+                                    <GenericTag id="_IDGenGenericTag2"  text="Subscription" status="Warning" />
+                                    </cells>
+                                </ColumnListItem>
+                                </items>
+                            </Table>
+                        
+                    </VBox>
+
+
+            </VBox>
+            </HBox>
+
+            <footer>
+            <Toolbar id="_IDGenToolbar2" width="260px" design="Transparent">
+                <content>
+                <HBox id="_IDGenHBox26">
+                    <Avatar id="_IDGenAvatar2" displayShape="Circle" initials="SK" displaySize="XS" tooltip="Profile Avatar" class="sapUiTinyMarginEnd avt2" />
+                    <VBox id="_IDGenVBox38">
+                    <Title id="_IDGenTitle14" text="Shivam Kumar" level="H3" class="tit1" />
+                    <Text id="_IDGenText35" text="shivam.t.kumar@capgemini.com" class="txt3" />
+                    </VBox>
+                </HBox>
+                </content>
+            </Toolbar>
+            </footer>
+
+    </Page>
+</mvc:View>

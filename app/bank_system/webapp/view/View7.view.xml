@@ -1,0 +1,80 @@
+<mvc:View controllerName="banksystem.controller.View7"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m"
+    xmlns:tnt="sap.tnt"
+    xmlns:table="sap.ui.table" 
+    xmlns:core="sap.ui.core">
+    <Page id="page7" title="{i18n>title}" showHeader="false">
+
+        <HBox id="_IDGenHBox18">
+            <VBox id="_IDGenVBox45" width="21%" height="100%">
+                <HBox id="_IDGenHBox34" class="sapUiLargeMarginBottom">
+                <Image id="_IDGenImage7" class="sapUiTinyMarginEnd" src="image/cube.png" width="40px" height="40px" />
+                <Title id="_IDGenTitle19" class="txt0" text="Horizon" level="H1" />
+                </HBox>
+
+                <SearchField id="_IDGenSearchField4" width="80%" class="sapUiSmallMargin" placeholder="Search" />
+
+                <VBox id="_IDGenVBox46" class="sapUiSmallMarginStart">
+                <Button id="_IDGenButton28" text="Home" icon="sap-icon://home" type="Transparent" width="45%"  class="btn0"/>
+                <Button id="_IDGenButton29" text="My Bank" icon="sap-icon://home" type="Transparent" width="51%" press="Onbank" class="btn0" />
+                <Button id="_IDGenButton30" text="Transaction History" icon="sap-icon://home" type="Transparent" width="75%" press="history" class="btn0" />
+                <Button id="_IDGenButton31" text="Payment Transfer" icon="sap-icon://home" type="Transparent" width="71%" class="btn0" />
+                <Button id="_IDGenButton32" text="Connect Bank" icon="sap-icon://home" type="Emphasized" width="62%" class="btn0" />
+                </VBox>
+            </VBox>
+
+            <VBox id="_IDGenVBox47" width="79%" class="sapUiSmallMarginEnd">
+                <Title id="_IDGenTitle20" text="Add Bank" level="H1" class="sapUiLargeMarginTop sapUiLargeMarginStart" />
+                <Text id="_IDGenText47" text="Securely link your bank accounts to gain complete financial visibility." class="sapUiSmallMarginStart sapUiLargeMarginEnd" />
+               
+               
+                <Label id="_IDGenLabel9" text="Bank Details" design="Bold" class="sapUiLargeMarginTop" />
+                <MessageStrip id="_IDGenMessageStrip" text="Your credentials are encrypted and never stored. We use secure APIs to connect your bank." type="Information" showIcon="true" />
+
+                <HBox id="_IDGenHBox35" class="sapUiLargeMarginTop" alignItems="Center">
+                    <Label id="_IDGenLabel10"  text="Recipient's Email Address" width="290px"></Label>
+                    <Input id="_IDGenInput16" value="Shivam@gmail.com" type="Email" required="true" editable="false" ></Input>
+                </HBox>
+
+                  <HBox id="_IDGenHBox36"  class="sapUiSmallMarginTop" alignItems="Center">
+                    <Label id="_IDGenLabel11" text="Card Holder Name" width="290px"></Label>
+                    <Input id="_IDGenInput17" type="Text" value="Shivam Singh" required="true" editable="false"></Input>
+                </HBox>
+
+                <HBox id="_IDGenHBox37"  class="sapUiSmallMarginTop" alignItems="Center">
+                    <Label id="_IDGenLabel12" text="Recipient's Bank Account Number" width="290px"></Label>
+                    <Input id="_IDGenInput18" type="Number" maxLength="16"  required="true" ></Input>
+                </HBox>
+
+                 <HBox id="_IDGenHBox38"  class="sapUiSmallMarginTop" alignItems="Center">
+                    <Label id="_IDGenLabel13" text="Expire Date" width="290px"></Label>
+                    <Input id="_IDGenInput19" type="Number" maxLength="16"  required="true" ></Input>
+                </HBox>
+
+                <HBox id="_IDGenHBox39"  class="sapUiSmallMarginTop sapUiLargeMarginBottom" alignItems="Center">
+                    <Label id="_IDGenLabel14" text="Bank Name" width="290px"></Label>
+                    <Input id="_IDGenInput20" type="Number" maxLength="16"  required="true" ></Input>
+                </HBox>
+
+                <Button id="_IDGenButton33"  text="Transfer Funds" type="Emphasized" width="50%" class="sapUiLargeMarginStart" ></Button>
+
+               
+            </VBox>
+            </HBox>
+
+            <footer>
+            <Toolbar id="_IDGenToolbar6" width="260px" design="Transparent">
+                <content>
+                <HBox id="_IDGenHBox40">
+                    <Avatar id="_IDGenAvatar5" displayShape="Circle" initials="SK" displaySize="XS" tooltip="Profile Avatar" class="sapUiTinyMarginEnd avt2" />
+                    <VBox id="_IDGenVBox48">
+                    <Title id="_IDGenTitle21" text="Shivam Kumar" level="H3" class="tit1" />
+                    <Text id="_IDGenText51" text="shivam.t.kumar@capgemini.com" class="txt3" />
+                    </VBox>
+                </HBox>
+                </content>
+            </Toolbar>
+            </footer>
+    </Page>
+</mvc:View>

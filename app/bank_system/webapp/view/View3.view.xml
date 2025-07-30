@@ -1,55 +1,145 @@
-<mvc:View xmlns:core="sap.ui.core" controllerName="banksystem.controller.View1"
+<mvc:View
+ controllerName="banksystem.controller.View3"
     xmlns:mvc="sap.ui.core.mvc"
     xmlns="sap.m"
-    xmlns:tnt="sap.tnt">
+    xmlns:tnt="sap.tnt"
+    xmlns:table="sap.ui.table" 
+    xmlns:core="sap.ui.core">
     <Page id="page3" title="{i18n>title}" showHeader="false" >
 
-        <HBox >
-            <VBox width="25%" height="100%" class="sapUiSmallMargin" >
-                <HBox  class="sapUiLargeMarginBottom" >
-                        <Image  class="sapUiTinyMarginEnd" src="image/cube.png" width="40px" height="40px"></Image>
-                        <Title  class="txt0" text="Horizon" level="H1"></Title>
+        <HBox id="_IDGenHBox13" >
+            <VBox id="_IDGenVBox6" width="21%" height="100%" >
+
+           
+                <HBox id="_IDGenHBox14"  class="sapUiLargeMarginBottom" >
+                        <Image id="_IDGenImage2"  class="sapUiTinyMarginEnd" src="image/cube.png" width="40px" height="40px"></Image>
+                        <Title id="_IDGenTitle4"  class="txt0" text="Horizon" level="H1"></Title>
                 </HBox>
-                <SearchField width="80%" class="sapUiSmallMargin" placeholder="Search" />
+                <SearchField id="_IDGenSearchField" width="80%" class="sapUiSmallMargin" placeholder="Search" />
                
-                <tnt:SideNavigation  >
-                    <tnt:NavigationList  >
-                        <tnt:NavigationListItem text="Home" icon="sap-icon://home" />
-                        <tnt:NavigationListItem text="My Bank" icon="sap-icon://paid-leave" />
-                        <tnt:NavigationListItem text="Transaction History" icon="sap-icon://course-book" />
-                        <tnt:NavigationListItem text="Payment Transfer" icon="sap-icon://money-bills" />
-                        <tnt:NavigationListItem text="Connect Bank" icon="sap-icon://monitor-payments" />
-                    </tnt:NavigationList>
-                </tnt:SideNavigation>
+            
+
+                <VBox id="_IDGenVBox28"  >
+                  
+                    <Button id="_IDGenButton8" text="Home" icon="sap-icon://home" type="Emphasized" width="45%" class="btn0"></Button>
+                    <Button id="_IDGenButton9" text="My Bank" icon="sap-icon://home" type="Transparent" width="51%" press="Onbank" class="btn0"></Button>
+                    <Button id="_IDGenButton10" text="Transaction History" icon="sap-icon://home" type="Transparent" width="75%" press="history" class="btn0"></Button>
+                    <Button id="_IDGenButton11" text="Payment Transfer" icon="sap-icon://home" type="Transparent" width="71%" press="payment" class="btn0"></Button>
+                    <Button id="_IDGenButton12" text="Connect Bank" icon="sap-icon://home" type="Transparent" width="62%" press="connectBank" class="btn0"></Button>
+                    
+                
+                
+                </VBox>
+                
+
+                
             </VBox>
 
-            <VBox width="50%"></VBox>
+            <VBox id="_IDGenVBox22" width="55%" class="sapUiTinyMarginEnd">
+            <HBox id="_IDGenHBox16" class="sapUiLargeMarginTop">
+                <Title id="_IDGenTitle6" text="Welcome" level="H1" class="sapUiSmallMarginEnd"></Title>
+                 <Title id="_IDGenTitle7" text="Shivam" level="H1" ></Title>
+            </HBox>
+                 <Text id="_IDGenText21" text="Access and manage your account and transactions efficiently."></Text>
 
-            <VBox  width="25%">
-            <VBox class="vbox0" alignItems="Start" justifyContent="End" width="100%" height="40%" >
-             <Avatar displayShape="Circle" initials="SK" displaySize="M" tooltip="Profile Avatar" class="avt1"> </Avatar>
+                 <Panel id="_IDGenPanel" class="sapUiSmallMarginBottom" >
+                    <HBox id="_IDGenHBox17" >
+                       
+                        <core:Icon id="_IDGenIcon" src="sap-icon://pie-chart" size="500%" class="sapUiLargeMarginEnd" color="blue"></core:Icon>
+                        <VBox id="_IDGenVBox25"  class="sapUiLargeMarginEnd">
+                            <Text id="_IDGenText22" text="2 Banks Accounts" width="100%" class="sapUiSmallMarginBottom"></Text>
+                            <Text id="_IDGenText23" text="Total Current Balance"></Text>
+                            <Label id="_IDGenLabel" text="$2,698.12" design="Bold"></Label>
+                        </VBox>
+
+                        <FlexBox id="_IDGenFlexBox" width="42%" justifyContent="End">
+                        <Link id="_IDGenLink" text="+ Add bank" href="" press="" class="link1"></Link>
+                        </FlexBox>
+                    </HBox>
+                 </Panel>
+
+                  <VBox id="_IDGenVBox26" >
+                            <Toolbar id="_IDGenToolbar" >
+                            <content>
+                            <ToolbarSpacer id="_IDGenToolbarSpacer" ></ToolbarSpacer>
+                               	<ComboBox id="_IDGenComboBox" placeholder="Select Bank Name"
+                                    >
+                                    <core:Item id="_IDGenItem" key="HDFC" text="HDFC" />
+                                     <core:Item id="_IDGenItem1" key="ICIC" text="ICIC" />
+                                     <core:Item id="_IDGenItem2" key="IDFC" text="IDFC" />
+                                </ComboBox>
+                            </content>
+                            </Toolbar>
+
+
+                            <Table id="_IDGenTable" >
+                                <columns>
+                                <Column id="_IDGenColumn" > <Text id="_IDGenText25" text="Transaction"></Text></Column>
+                                <Column id="_IDGenColumn1" > <Text id="_IDGenText26" text="Amount"></Text></Column>
+                                <Column id="_IDGenColumn2" > <Text id="_IDGenText27" text="Status"></Text></Column>
+                                <Column id="_IDGenColumn3" > <Text id="_IDGenText28" text="Date"></Text></Column>
+                                <Column id="_IDGenColumn4" > <Text id="_IDGenText29" text="Category"></Text></Column>
+                                </columns>
+
+                                <items>
+                                <ColumnListItem id="_IDGenColumnListItem" >
+                                    <cells>
+                                    <Text id="_IDGenText30" text="Transaction"></Text>
+                                    <Text id="_IDGenText31" text="Transaction"></Text>
+                                   <tnt:InfoLabel id="il4" text="Success" renderMode="Narrow" colorScheme="4"/>
+                                    <Text id="_IDGenText32" text="Transaction"></Text>
+                                   
+                                    <GenericTag id="_IDGenGenericTag" text="Subscription" status="Warning" />
+                                    </cells>
+                                </ColumnListItem>
+                                </items>
+                            </Table>
+                        
+                    </VBox>
+            
+            
+            
             </VBox>
 
-            <Title text="Shivam Kumar" level="H1"></Title>
-            <Text text="shivam.t.kumar@capgemini.com"></Text>
+            <VBox id="_IDGenVBox23"  width="25%" class="sapUiSmallMarginBottom">
+            <VBox id="_IDGenVBox24" class="vbox0" alignItems="Start" justifyContent="End" width="100%" height="40%" >
+             <Avatar id="_IDGenAvatar" displayShape="Circle" initials="SK" displaySize="M" tooltip="Profile Avatar" class="avt1"> </Avatar>
+            </VBox>
 
-            <HBox >
-                <Text text="My Bank"></Text>
-                <Button text="+ Add bank" type="Transparent"></Button>
+            <Title id="_IDGenTitle5" text="Shivam Kumar" level="H1" class="sapUiLargeMarginTop"></Title>
+            <Text id="_IDGenText19" text="shivam.t.kumar@capgemini.com" class="sapUiLargeMarginBottom"></Text>
+
+            <HBox id="_IDGenHBox15" alignItems="Center" justifyContent="SpaceBetween" >
+                <Text id="_IDGenText20" text="My Bank"></Text>
+                <Button id="_IDGenButton6" text="+ Add bank" type="Transparent" press="onPress"></Button>
             </HBox>
 
-            <Title text="My budgets"></Title>
+            <Panel id="_IDGenPanel1" >
+                <Image id="_IDGenImage3" src="image/images.jpg" width="100%"></Image>
+            </Panel>
 
-         
-                <HBox alignItems="Center" height="15%" >
-                    <core:Icon src="sap-icon://my-view" class="sapUiTinyMarginEnd" backgroundColor="RED" width="20%" height="25%"></core:Icon>
-                    <ProgressIndicator percentValue="40" displayValue="Subscriptions" showValue="true" state="Information" width="80%" />
-                </HBox>
-        
+       
            
             </VBox>
         </HBox>
 
+
+        <footer>
+          
+            <Toolbar id="_IDGenToolbar1" width="260px" design="Transparent">
+                <content>
+                <HBox id="_IDGenHBox12">
+                    <Avatar id="_IDGenAvatar1" displayShape="Circle" initials="SK" displaySize="XS" tooltip="Profile Avatar" class="sapUiTinyMarginEnd avt2"> </Avatar> 
+                <VBox id="_IDGenVBox27" >
+                    <Title id="_IDGenTitle9" text="Shivam Kumar" level="H3" class="tit1" ></Title>
+                    <Text id="_IDGenText33"  text="shivam.t.kumar@capgemini.com" class="txt3"></Text>
+                </VBox>
+                </HBox>
+                
+               
+                </content>
+            </Toolbar>
+        </footer>
 
     </Page>
 </mvc:View>

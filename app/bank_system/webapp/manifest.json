@@ -112,6 +112,34 @@
           "target": [
             "TargetView3"
           ]
+        },
+        {
+          "name": "RouteView4",
+          "pattern": "View4",
+          "target": [
+            "TargetView4"
+          ]
+        },
+        {
+          "name": "RouteView5",
+          "pattern": "View5",
+          "target": [
+            "TargetView5"
+          ]
+        },
+        {
+          "name": "RouteView6",
+          "pattern": "View6",
+          "target": [
+            "TargetView6"
+          ]
+        },
+        {
+          "name": "RouteView7",
+          "pattern": "View7",
+          "target": [
+            "TargetView7"
+          ]
         }
       ],
       "targets": {
@@ -126,6 +154,22 @@
         "TargetView3": {
           "id": "View3",
           "name": "View3"
+        },
+        "TargetView4": {
+          "id": "View4",
+          "name": "View4"
+        },
+        "TargetView5": {
+          "id": "View5",
+          "name": "View5"
+        },
+        "TargetView6": {
+          "id": "View6",
+          "name": "View6"
+        },
+        "TargetView7": {
+          "id": "View7",
+          "name": "View7"
         }
       }
     },
