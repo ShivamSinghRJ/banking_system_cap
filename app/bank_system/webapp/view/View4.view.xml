@@ -37,7 +37,7 @@
             <HBox id="_IDGenHBox21"
                 wrap="Wrap"
                 justifyContent="Start"
-                items="{/cards}"
+                items="{BankDetails>/}"
                 class="sapUiMediumMarginBottom" backgroundDesign="Transparent">
 
                 <items>
@@ -45,9 +45,9 @@
                     <ObjectListItem id="_IDGenObjectListItem"
                         title="{bank}" class="hbox2">
                         <attributes>
-                        <ObjectAttribute id="_IDGenObjectAttribute" text="{name}"/>
-                        <ObjectAttribute id="_IDGenObjectAttribute1" text="{expiry}" />
-                        <ObjectAttribute id="_IDGenObjectAttribute2" text="{number}" />
+                        <ObjectAttribute id="_IDGenObjectAttribute" text="{BankDetails>bank_name}"/>
+                        <ObjectAttribute id="_IDGenObjectAttribute1" text="{BankDetails>expire_date}" />
+                        <ObjectAttribute id="_IDGenObjectAttribute2" text="{BankDetails>card_number}" />
                         </attributes>
                     </ObjectListItem>
                     </VBox>

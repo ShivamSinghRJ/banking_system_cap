@@ -1,0 +1,94 @@
+<mvc:View controllerName="banksystem.controller.View8" 
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m"
+    xmlns:tnt="sap.tnt"
+    xmlns:table="sap.ui.table" 
+    xmlns:core="sap.ui.core">
+    <Page id="page8" title="{i18n>title}" >
+
+        <HBox id="_IDGenHBox42">
+            <VBox id="_IDGenVBox49" width="21%" height="100%">
+                <HBox id="_IDGenHBox43" class="sapUiLargeMarginBottom">
+                <Image id="_IDGenImage8" class="sapUiTinyMarginEnd" src="image/cube.png" width="40px" height="40px" />
+                <Title id="_IDGenTitle22" class="txt0" text="Horizon" level="H1" />
+                </HBox>
+
+                <SearchField id="_IDGenSearchField5" width="80%" class="sapUiSmallMargin" placeholder="Search" />
+
+                <VBox id="_IDGenVBox50">
+                <Button id="_IDGenButton35" text="Home" icon="sap-icon://home" type="Transparent" textDirection="LTR" width="45%" class="btn0" />
+                <Button id="_IDGenButton36" text="My Bank" icon="sap-icon://home" type="Transparent" width="51%" press="Onbank" class="btn0" />
+                <Button id="_IDGenButton37" text="Transaction History" icon="sap-icon://home" type="Transparent" width="75%" press="history" class="btn0" />
+                <Button id="_IDGenButton38" text="Payment Transfer" icon="sap-icon://home" type="Transparent" width="71%" class="btn0" />
+                <Button id="_IDGenButton39" text="Connect Bank" icon="sap-icon://home" type="Transparent" width="62%" class="btn0" />
+                <Button id="_IDGenButton40"   text="Add Money" icon="sap-icon://home" type="Emphasized" width="56%" press="AddMoney" class="btn0"></Button>
+                    
+                </VBox>
+            </VBox>
+
+            <VBox id="_IDGenVBox51" width="79%" class="sapUiTinyMarginEnd">
+                <Title id="_IDGenTitle23" text="My Bank Accounts" level="H1" class="sapUiLargeMarginTop sapUiLargeMarginStart" />
+                <Text id="_IDGenText52" text="Effortsly manages your banking accounts" class="sapUiSmallMarginStart sapUiLargeMarginEnd" />
+                <Label id="_IDGenLabel3" text="Select Your cards" design="Bold" class="sapUiLargeMarginTop" />
+
+              <HBox id="_IDGenHBox44"  alignItems="Center"  class="sapUiSmallMarginTop">
+                    <VBox id="_IDGenVBox52"  class="sapUiLargeMarginEnd" width="250px" >
+                        <Label id="_IDGenLabel15"  text="Select Source Bank"></Label>
+                        <Text id="_IDGenText54"  text="Select the bank account you want to transfer funds from" class="sapUiSmallMarginStart"></Text>
+                    </VBox>
+
+                    <ComboBox id="_IDGenComboBox3"   placeholder="Select Bank Name" required="true">
+                            <core:Item id="_IDGenItem9"   key="HDFC" text="HDFC" />
+                            <core:Item id="_IDGenItem10"   key="ICIC" text="ICIC" />
+                            <core:Item id="_IDGenItem11"  key="IDFC" text="IDFC" />
+                    </ComboBox>
+                </HBox>
+
+                
+                 <HBox id="_IDGenHBox46"  class="sapUiLargeMarginBottom sapUiSmallMarginTop" alignItems="Center">
+                    <VBox id="_IDGenVBox54"  class="sapUiSmallMarginEnd" width="280px">
+                        <Label id="_IDGenLabel16"  text="Transfer Note (Optional)"></Label>
+                        <Text id="_IDGenText55"  text="Please provide any additional information or instruction related to the transfer" ></Text>
+                    </VBox>
+                   <TextArea id="_IDGenTextArea1" rows="3" width="243%" valueState="Information" placeholder="Write a short note here"></TextArea>
+                </HBox>
+                
+                <Title id="_IDGenTitle25"  text="Bank account details"></Title>
+                <Text id="_IDGenText56" text="Enter the bank account details of the recipiant"></Text>
+               
+               <HBox id="_IDGenHBox47"  class="sapUiLargeMarginTop" alignItems="Center">
+                    <Label id="_IDGenLabel17"  text="Recipient's Email Address" width="290px"></Label>
+                    <Input id="_IDGenInput21" type="Email" required="true" ></Input>
+               </HBox>
+
+                <HBox id="_IDGenHBox48"  class="sapUiSmallMarginTop" alignItems="Center">
+                    <Label id="_IDGenLabel18"  text="Recipient's Bank Account Number" width="290px"></Label>
+                    <Input id="_IDGenInput22"  type="Number" maxLength="16"  required="true" ></Input>
+               </HBox>
+
+                <HBox id="_IDGenHBox49" class="sapUiSmallMarginTop sapUiLargeMarginBottom" alignItems="Center">
+                    <Label id="_IDGenLabel19"  text="Amount" width="290px"></Label>
+                    <Input id="_IDGenInput23" type="Number" maxLength="16"  required="true" ></Input>
+               </HBox>
+
+
+               <Button id="_IDGenButton41"  text="Transfer Funds" type="Emphasized" width="70%" class="sapUiLargeMarginStart" ></Button>
+
+            </VBox>
+            </HBox>
+
+            <footer>
+            <Toolbar id="_IDGenToolbar7" width="260px" design="Transparent">
+                <content>
+                <HBox id="_IDGenHBox45">
+                    <Avatar id="_IDGenAvatar6" displayShape="Circle" initials="SK" displaySize="XS" tooltip="Profile Avatar" class="sapUiTinyMarginEnd avt2" />
+                    <VBox id="_IDGenVBox53">
+                    <Title id="_IDGenTitle24" text="Shivam Kumar" level="H3" class="tit1" />
+                    <Text id="_IDGenText53" text="shivam.t.kumar@capgemini.com" class="txt3" />
+                    </VBox>
+                </HBox>
+                </content>
+            </Toolbar>
+            </footer>
+    </Page>
+</mvc:View>

@@ -26,6 +26,7 @@
                     <Button id="_IDGenButton10" text="Transaction History" icon="sap-icon://home" type="Transparent" width="75%" press="history" class="btn0"></Button>
                     <Button id="_IDGenButton11" text="Payment Transfer" icon="sap-icon://home" type="Transparent" width="71%" press="payment" class="btn0"></Button>
                     <Button id="_IDGenButton12" text="Connect Bank" icon="sap-icon://home" type="Transparent" width="62%" press="connectBank" class="btn0"></Button>
+                    <Button id="_IDGenButton34"  text="Add Money" icon="sap-icon://home" type="Transparent" width="56%" press="AddMoney" class="btn0"></Button>
                     
                 
                 
@@ -38,7 +39,7 @@
             <VBox id="_IDGenVBox22" width="55%" class="sapUiTinyMarginEnd">
             <HBox id="_IDGenHBox16" class="sapUiLargeMarginTop">
                 <Title id="_IDGenTitle6" text="Welcome" level="H1" class="sapUiSmallMarginEnd"></Title>
-                 <Title id="_IDGenTitle7" text="Shivam" level="H1" ></Title>
+                 <Title id="_IDGenTitle7" text="{MasterModel>/0/First_name}" level="H1" ></Title>
             </HBox>
                  <Text id="_IDGenText21" text="Access and manage your account and transactions efficiently."></Text>
 
@@ -47,9 +48,9 @@
                        
                         <core:Icon id="_IDGenIcon" src="sap-icon://pie-chart" size="500%" class="sapUiLargeMarginEnd" color="blue"></core:Icon>
                         <VBox id="_IDGenVBox25"  class="sapUiLargeMarginEnd">
-                            <Text id="_IDGenText22" text="2 Banks Accounts" width="100%" class="sapUiSmallMarginBottom"></Text>
+                            <Text id="_IDGenText22" text="{BankModel>/bankCount} Banks Accounts" width="100%" class="sapUiSmallMarginBottom"></Text>
                             <Text id="_IDGenText23" text="Total Current Balance"></Text>
-                            <Label id="_IDGenLabel" text="$2,698.12" design="Bold"></Label>
+                            <Label id="_IDGenLabel" text="$ {BankModel>/totalMoney}" design="Bold"></Label>
                         </VBox>
 
                         <FlexBox id="_IDGenFlexBox" width="42%" justifyContent="End">
@@ -62,17 +63,14 @@
                             <Toolbar id="_IDGenToolbar" >
                             <content>
                             <ToolbarSpacer id="_IDGenToolbarSpacer" ></ToolbarSpacer>
-                               	<ComboBox id="_IDGenComboBox" placeholder="Select Bank Name"
-                                    >
-                                    <core:Item id="_IDGenItem" key="HDFC" text="HDFC" />
-                                     <core:Item id="_IDGenItem1" key="ICIC" text="ICIC" />
-                                     <core:Item id="_IDGenItem2" key="IDFC" text="IDFC" />
+                               	<ComboBox id="_IDGenComboBox" selectionChange="onBankChange" placeholder="Select Bank Name" items="{BankModel>/}"  selectedKey="{selectedBank}">
+                                    <core:Item id="_IDGenItem" key="{BankModel>bank_name}" text="{BankModel>bank_name}" />
                                 </ComboBox>
                             </content>
                             </Toolbar>
 
 
-                            <Table id="_IDGenTable" >
+                            <Table id="_IDGenTable" items="{TransctionModel>/}" >
                                 <columns>
                                 <Column id="_IDGenColumn" > <Text id="_IDGenText25" text="Transaction"></Text></Column>
                                 <Column id="_IDGenColumn1" > <Text id="_IDGenText26" text="Amount"></Text></Column>
@@ -84,12 +82,11 @@
                                 <items>
                                 <ColumnListItem id="_IDGenColumnListItem" >
                                     <cells>
-                                    <Text id="_IDGenText30" text="Transaction"></Text>
-                                    <Text id="_IDGenText31" text="Transaction"></Text>
-                                   <tnt:InfoLabel id="il4" text="Success" renderMode="Narrow" colorScheme="4"/>
-                                    <Text id="_IDGenText32" text="Transaction"></Text>
-                                   
-                                    <GenericTag id="_IDGenGenericTag" text="Subscription" status="Warning" />
+                                    <Text id="_IDGenText30" text="{TransctionModel>transaction}"></Text>
+                                    <Text id="_IDGenText31" text="$ {TransctionModel>amount}"></Text>
+                                    <tnt:InfoLabel id="il4" text="{TransctionModel>status}" renderMode="Narrow" colorScheme="4"/>
+                                    <Text id="_IDGenText32" text="{TransctionModel>createdAt}"></Text>
+                                    <GenericTag id="_IDGenGenericTag" text="{TransctionModel>category}" status="Warning" />
                                     </cells>
                                 </ColumnListItem>
                                 </items>
@@ -106,8 +103,8 @@
              <Avatar id="_IDGenAvatar" displayShape="Circle" initials="SK" displaySize="M" tooltip="Profile Avatar" class="avt1"> </Avatar>
             </VBox>
 
-            <Title id="_IDGenTitle5" text="Shivam Kumar" level="H1" class="sapUiLargeMarginTop"></Title>
-            <Text id="_IDGenText19" text="shivam.t.kumar@capgemini.com" class="sapUiLargeMarginBottom"></Text>
+            <Title id="_IDGenTitle5" text="{MasterModel>/0/name}" level="H1" class="sapUiLargeMarginTop"></Title>
+            <Text id="_IDGenText19" text="{MasterModel>/0/email}" class="sapUiLargeMarginBottom"></Text>
 
             <HBox id="_IDGenHBox15" alignItems="Center" justifyContent="SpaceBetween" >
                 <Text id="_IDGenText20" text="My Bank"></Text>
@@ -131,8 +128,8 @@
                 <HBox id="_IDGenHBox12">
                     <Avatar id="_IDGenAvatar1" displayShape="Circle" initials="SK" displaySize="XS" tooltip="Profile Avatar" class="sapUiTinyMarginEnd avt2"> </Avatar> 
                 <VBox id="_IDGenVBox27" >
-                    <Title id="_IDGenTitle9" text="Shivam Kumar" level="H3" class="tit1" ></Title>
-                    <Text id="_IDGenText33"  text="shivam.t.kumar@capgemini.com" class="txt3"></Text>
+                    <Title id="_IDGenTitle9" text="{MasterModel>/0/name}" level="H3" class="tit1" ></Title>
+                    <Text id="_IDGenText33"  text="{MasterModel>/0/email}" class="txt3"></Text>
                 </VBox>
                 </HBox>
                 

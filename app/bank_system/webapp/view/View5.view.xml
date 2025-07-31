@@ -33,19 +33,18 @@
                             <Toolbar id="_IDGenToolbar4"  >
                             <content>
                             <ToolbarSpacer id="_IDGenToolbarSpacer1" ></ToolbarSpacer>
-                               	<ComboBox id="_IDGenComboBox1"  placeholder="Select Bank Name"
-                                    >
-                                    <core:Item id="_IDGenItem3"  key="HDFC" text="HDFC" />
-                                     <core:Item id="_IDGenItem4"  key="ICIC" text="ICIC" />
-                                     <core:Item id="_IDGenItem5"  key="IDFC" text="IDFC" />
+                               	<ComboBox id="_IDGenComboBox1"  selectionChange="onBankSelection" placeholder="Select Bank Name" items="{BankModel>/}"  selectedKey="{selectedBank}">
+                                    <core:Item id="_IDGenItem3"  key="{BankModel>bank_name}" text="{BankModel>bank_name}" />
+                                   
                                 </ComboBox>
                             </content>
                             </Toolbar>
 
 
-                            <Table id="_IDGenTable1" growing="true" growingThreshold="8" growingScrollToLoad="true"  >
+                            <Table id="_IDGenTable1" growing="true" growingThreshold="8" growingScrollToLoad="true"  items="{TransctionModel>/}">
                                 <columns>
                                 <Column id="_IDGenColumn5"  > <Text id="_IDGenText36"  text="Transaction"></Text></Column>
+                                 <Column id="_IDGenColumn11"   > <Text id="_IDGenText57"  text="Bank Name"></Text></Column>
                                 <Column id="_IDGenColumn6"  > <Text id="_IDGenText37" text="Amount"></Text></Column>
                                 <Column id="_IDGenColumn7"  > <Text id="_IDGenText38" text="Status"></Text></Column>
                                 <Column id="_IDGenColumn8"  > <Text id="_IDGenText39"  text="Date"></Text></Column>
@@ -55,12 +54,12 @@
                                 <items>
                                 <ColumnListItem id="_IDGenColumnListItem1"  >
                                     <cells>
-                                    <Text id="_IDGenText41"  text="Transaction"></Text>
-                                    <Text id="_IDGenText42"  text="Transaction"></Text>
-                                   <tnt:InfoLabel id="_IDGenInfoLabel"  text="Success" renderMode="Narrow" colorScheme="4"/>
-                                    <Text id="_IDGenText43" text="Transaction"></Text>
-                                   
-                                    <GenericTag id="_IDGenGenericTag2"  text="Subscription" status="Warning" />
+                                    <Text id="_IDGenText41"  text="{TransctionModel>transaction}"></Text>
+                                    <Text id="_IDGenText58" text="{TransctionModel>bank_name}"></Text>
+                                    <Text id="_IDGenText42"  text="$ {TransctionModel>amount}"></Text>
+                                   <tnt:InfoLabel id="_IDGenInfoLabel"  text="{TransctionModel>status}" renderMode="Narrow" colorScheme="4"/>
+                                    <Text id="_IDGenText43" text="{TransctionModel>createdAt}"></Text>
+                                    <GenericTag id="_IDGenGenericTag2"  text="{TransctionModel>category}" status="Warning" />
                                     </cells>
                                 </ColumnListItem>
                                 </items>

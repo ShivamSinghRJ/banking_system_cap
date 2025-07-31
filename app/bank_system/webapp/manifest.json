@@ -108,37 +108,44 @@
         },
         {
           "name": "RouteView3",
-          "pattern": "View3",
+          "pattern": "View3/{email}",
           "target": [
             "TargetView3"
           ]
         },
         {
           "name": "RouteView4",
-          "pattern": "View4",
+          "pattern": "View4/{email}",
           "target": [
             "TargetView4"
           ]
         },
         {
           "name": "RouteView5",
-          "pattern": "View5",
+          "pattern": "View5/{email}",
           "target": [
             "TargetView5"
           ]
         },
         {
           "name": "RouteView6",
-          "pattern": "View6",
+          "pattern": "View6/{email}",
           "target": [
             "TargetView6"
           ]
         },
         {
           "name": "RouteView7",
-          "pattern": "View7",
+          "pattern": "View7/{email}",
           "target": [
             "TargetView7"
+          ]
+        },
+        {
+          "name": "RouteView8",
+          "pattern": "View8/{email}",
+          "target": [
+            "TargetView8"
           ]
         }
       ],
@@ -170,6 +177,10 @@
         "TargetView7": {
           "id": "View7",
           "name": "View7"
+        },
+        "TargetView8": {
+          "id": "View8",
+          "name": "View8"
         }
       }
     },

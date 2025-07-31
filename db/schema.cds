@@ -24,6 +24,7 @@ entity Bank :cuid , managed {
     bank_name : String;
     card_number : String(16) @mandatory;
     expire_date : Date @mandatory;
+    amount : Decimal(16,2) default 0.00;
 }
 
 entity Transaction:cuid , managed {

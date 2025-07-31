@@ -18,6 +18,8 @@
                 <Button id="_IDGenButton24" text="Transaction History" icon="sap-icon://home" type="Transparent" width="75%" press="history" class="btn0" />
                 <Button id="_IDGenButton25" text="Payment Transfer" icon="sap-icon://home" type="Emphasized" width="71%" class="btn0" />
                 <Button id="_IDGenButton26" text="Connect Bank" icon="sap-icon://home" type="Transparent" width="62%" class="btn0" />
+                <Button id="_IDGenButton42"   text="Add Money" icon="sap-icon://home" type="Transparent" width="56%" press="AddMoney" class="btn0"></Button>
+                    
                 </VBox>
             </VBox>
 
@@ -28,14 +30,13 @@
                  
                 <HBox id="_IDGenHBox28" alignItems="Center"  class="sapUiSmallMarginTop">
                     <VBox id="_IDGenVBox42" class="sapUiLargeMarginEnd" width="250px" >
-                        <Label id="_IDGenLabel4" text="Select Source Bank"></Label>
+                        <Label id="_IDGenLabel4" text="Select Source Bank"  required="true" ></Label>
                         <Text id="_IDGenText48" text="Select the bank account you want to transfer funds from" class="sapUiSmallMarginStart"></Text>
                     </VBox>
 
-                    <ComboBox id="_IDGenComboBox2"  placeholder="Select Bank Name" required="true">
-                            <core:Item id="_IDGenItem6"  key="HDFC" text="HDFC" />
-                            <core:Item id="_IDGenItem7"  key="ICIC" text="ICIC" />
-                            <core:Item id="_IDGenItem8"  key="IDFC" text="IDFC" />
+                    <ComboBox id="_IDGenComboBox2" selectionChange="onBankChange" placeholder="Select Bank Name" items="{BankModel>/}"  selectedKey="{selectedBank}" required="true">
+                            <core:Item id="_IDGenItem6" key="{BankModel>bank_name}" text="{BankModel>bank_name}" />
+                            
                     </ComboBox>
                 </HBox>
 
@@ -50,24 +51,34 @@
                 
                 <Title id="_IDGenTitle18" text="Bank account details"></Title>
                 <Text id="_IDGenText50" text="Enter the bank account details of the recipiant"></Text>
-               
-               <HBox id="_IDGenHBox31" class="sapUiLargeMarginTop" alignItems="Center">
-                    <Label id="_IDGenLabel6" text="Recipient's Email Address" width="290px"></Label>
-                    <Input id="_IDGenInput13" type="Email" required="true" ></Input>
+
+                <HBox id="_IDGenHBox50"  class="sapUiLargeMarginTop" alignItems="Center">
+                    <Label id="_IDGenLabel20"  text="Card Number" width="290px" required="true"></Label>
+                    <Input id="_IDGenInput24"  type="Number" editable="true" required="true"></Input>
+                </HBox>
+
+                 <HBox id="_IDGenHBox51"  class="sapUiSmallMarginTop" alignItems="Center">
+                    <Label id="_IDGenLabel21"  text="Expiry Date Of Card Number" width="290px" required="true"></Label>
+                    <Input id="_IDGenInput25" placeholder="YYYY-MM-DD"  type="Text" editable="true" required="true"></Input>
+                </HBox>
+
+               <HBox id="_IDGenHBox31" class="sapUiSmallMarginTop" alignItems="Center">
+                    <Label id="_IDGenLabel6" text="Email Address" width="290px" required="true"></Label>
+                    <Input id="_IDGenInput13" type="Email" editable="false"></Input>
                </HBox>
 
                 <HBox id="_IDGenHBox32" class="sapUiSmallMarginTop" alignItems="Center">
-                    <Label id="_IDGenLabel7" text="Recipient's Bank Account Number" width="290px"></Label>
+                    <Label id="_IDGenLabel7" text="Recipient's Bank Account Number" width="290px"  required="true"></Label>
                     <Input id="_IDGenInput14" type="Number" maxLength="16"  required="true" ></Input>
                </HBox>
 
                 <HBox id="_IDGenHBox33" class="sapUiSmallMarginTop sapUiLargeMarginBottom" alignItems="Center">
-                    <Label id="_IDGenLabel8" text="Amount" width="290px"></Label>
+                    <Label id="_IDGenLabel8" text="Amount" width="290px"  required="true"></Label>
                     <Input id="_IDGenInput15" type="Number" maxLength="16"  required="true" ></Input>
                </HBox>
 
 
-               <Button id="_IDGenButton27" text="Transfer Funds" type="Emphasized" width="70%" class="sapUiLargeMarginStart" ></Button>
+               <Button id="_IDGenButton27" text="Transfer Funds" type="Emphasized" width="70%" class="sapUiLargeMarginStart" press="onTransfer" ></Button>
 
             </VBox>
             </HBox>

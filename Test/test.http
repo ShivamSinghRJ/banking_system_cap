@@ -31,9 +31,10 @@ Content-Type: application/json
 
 {
   "email": "shivam.k@example.com",
-  "bank_name": "HDFC Bank",
-  "card_number": "1234567890123456",
-  "expire_date": "2026-09-30"
+  "bank_name": "IDFC Bank",
+  "card_number": "1234567890123459",
+  "expire_date": "2026-09-30",
+  "amount" : "10000.00"
 }
 
 

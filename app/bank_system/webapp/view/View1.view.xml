@@ -46,5 +46,20 @@
         </VBox>
 
 
+            <!-- <Toolbar id="_IDGenToolbar7" >
+                      <MessageStrip id="_IDGenMessageStrip2"
+                        text="Error with default icon and close button:"
+                        type="Error"
+                        showIcon="true"
+                        showCloseButton="true"
+                        class="sapUiMediumMarginBottom"
+                       >
+                    </MessageStrip>
+            
+            </Toolbar>
+         -->
+
+
+
     </Page>
 </mvc:View>
