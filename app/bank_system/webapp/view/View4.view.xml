@@ -16,11 +16,12 @@
             <SearchField id="_IDGenSearchField1" width="80%" class="sapUiSmallMargin" placeholder="Search" />
 
             <VBox id="_IDGenVBox30">
-            <Button id="_IDGenButton7" text="Home" icon="sap-icon://home" type="Transparent" textDirection="LTR" width="45%" class="btn0" />
-            <Button id="_IDGenButton13" text="My Bank" icon="sap-icon://home" type="Emphasized" width="51%" press="Onbank" class="btn0" />
+            <Button id="_IDGenButton7" text="Home" icon="sap-icon://home" type="Transparent" textDirection="LTR" width="45%" class="btn0" press="home" />
+            <Button id="_IDGenButton13" text="My Bank" icon="sap-icon://home" type="Emphasized" width="51%" press="Onbank" class="btn0"  />
             <Button id="_IDGenButton14" text="Transaction History" icon="sap-icon://home" type="Transparent" width="75%" press="history" class="btn0" />
-            <Button id="_IDGenButton15" text="Payment Transfer" icon="sap-icon://home" type="Transparent" width="71%" class="btn0" />
-            <Button id="_IDGenButton16" text="Connect Bank" icon="sap-icon://home" type="Transparent" width="62%" class="btn0" />
+            <Button id="_IDGenButton15" text="Payment Transfer" icon="sap-icon://home" type="Transparent" width="71%" class="btn0" press="paymentTranfer" />
+            <Button id="_IDGenButton16" text="Connect Bank" icon="sap-icon://home" type="Transparent" width="62%" class="btn0" press="connectBank" />
+            <Button id="_IDGenButton43"  text="Add money" icon="sap-icon://home" type="Transparent" width="62%" class="btn0" press="addMoney" />
             </VBox>
         </VBox>
 

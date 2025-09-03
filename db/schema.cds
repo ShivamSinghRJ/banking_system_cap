@@ -6,15 +6,15 @@ entity people : managed{
     First_name : String @assert.format: '^[a-zA-Z]+$';
     Last_name : String @assert.format: '^[a-zA-Z]+$';
     name : String = (First_name || ' ' || Last_name) stored;
-    gender : String @assert.range  enum { Male; Female; Other; };
-    mobile : String @assert.format: '^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$';
+    gender : String; //  @assert.range  enum { Male; Female; Other; };
+    mobile : String; //@assert.format: '^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$';
     Address : String;
     City : String;
     State : String; 
     Postal_code : String;
     Dob : Date;
     SSN : String;
-    Password : String @mandatory @assert.format: '^(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$';
+    Password : String; // @mandatory @assert.format: '^(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$';
     createdBy : String = (First_name || ' ' || Last_name) stored ;
     modifiedBy : String = (First_name || ' ' || Last_name) stored ;
 }

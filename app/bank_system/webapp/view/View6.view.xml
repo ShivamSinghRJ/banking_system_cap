@@ -13,12 +13,12 @@
                 <SearchField id="_IDGenSearchField3" width="80%" class="sapUiSmallMargin" placeholder="Search" />
 
                 <VBox id="_IDGenVBox40" class="sapUiSmallMarginStart">
-                <Button id="_IDGenButton22" text="Home" icon="sap-icon://home" type="Transparent" textDirection="LTR" width="45%" class="btn0" />
-                <Button id="_IDGenButton23" text="My Bank" icon="sap-icon://home" type="Transparent" width="51%" press="Onbank" class="btn0" />
+                <Button id="_IDGenButton22" text="Home" icon="sap-icon://home" type="Transparent" textDirection="LTR" width="45%" class="btn0" press="home" />
+                <Button id="_IDGenButton23" text="My Bank" icon="sap-icon://home" type="Transparent" width="51%" press="Onbank" class="btn0"  />
                 <Button id="_IDGenButton24" text="Transaction History" icon="sap-icon://home" type="Transparent" width="75%" press="history" class="btn0" />
-                <Button id="_IDGenButton25" text="Payment Transfer" icon="sap-icon://home" type="Emphasized" width="71%" class="btn0" />
-                <Button id="_IDGenButton26" text="Connect Bank" icon="sap-icon://home" type="Transparent" width="62%" class="btn0" />
-                <Button id="_IDGenButton42"   text="Add Money" icon="sap-icon://home" type="Transparent" width="56%" press="AddMoney" class="btn0"></Button>
+                <Button id="_IDGenButton25" text="Payment Transfer" icon="sap-icon://home" type="Emphasized" width="71%" class="btn0" press="paymentTranfer" />
+                <Button id="_IDGenButton26" text="Connect Bank" icon="sap-icon://home" type="Transparent" width="62%" class="btn0" press="connectBank" />
+                <Button id="_IDGenButton42"   text="Add Money" icon="sap-icon://home" type="Transparent" width="56%" press="addMoney" class="btn0"></Button>
                     
                 </VBox>
             </VBox>
@@ -34,9 +34,8 @@
                         <Text id="_IDGenText48" text="Select the bank account you want to transfer funds from" class="sapUiSmallMarginStart"></Text>
                     </VBox>
 
-                    <ComboBox id="_IDGenComboBox2" selectionChange="onBankChange" placeholder="Select Bank Name" items="{BankModel>/}"  selectedKey="{selectedBank}" required="true">
+                    <ComboBox id="_IDGenComboBox2" placeholder="Select Bank Name" items="{BankModel>/}"  selectedKey="{selectedBank}" required="true">
                             <core:Item id="_IDGenItem6" key="{BankModel>bank_name}" text="{BankModel>bank_name}" />
-                            
                     </ComboBox>
                 </HBox>
 
@@ -59,7 +58,8 @@
 
                  <HBox id="_IDGenHBox51"  class="sapUiSmallMarginTop" alignItems="Center">
                     <Label id="_IDGenLabel21"  text="Expiry Date Of Card Number" width="290px" required="true"></Label>
-                    <Input id="_IDGenInput25" placeholder="YYYY-MM-DD"  type="Text" editable="true" required="true"></Input>
+                    <DatePicker id="_IDGenInput25" required="true" ></DatePicker>
+                    <!-- <Input id="_IDGenInput25" placeholder="YYYY-MM-DD"  type="Text" editable="true" required="true"></Input> -->
                 </HBox>
 
                <HBox id="_IDGenHBox31" class="sapUiSmallMarginTop" alignItems="Center">
@@ -67,9 +67,36 @@
                     <Input id="_IDGenInput13" type="Email" editable="false"></Input>
                </HBox>
 
+               
+               <HBox id="_IDGenHBox52" class="sapUiSmallMarginTop" alignItems="Center">
+                    <Label id="_IDGenLabel23" text="Recipient's Email Address" width="290px"  required="true"></Label>
+                    <Input id="_IDGenInput11" type="Email"  required="true" ></Input>
+               </HBox>
                 <HBox id="_IDGenHBox32" class="sapUiSmallMarginTop" alignItems="Center">
                     <Label id="_IDGenLabel7" text="Recipient's Bank Account Number" width="290px"  required="true"></Label>
                     <Input id="_IDGenInput14" type="Number" maxLength="16"  required="true" ></Input>
+               </HBox>
+
+                <HBox id="_IDGenHBox53" class="sapUiSmallMarginTop" alignItems="Center">
+                    <Label id="_IDGenLabel24"  text="Transaction" width="290px"  required="true"></Label>
+                    <ComboBox id="_IDGenComboBox4"  placeholder="Transaction Type"  selectedKey="selectedTrans" required="true">
+                            <core:Item id="_IDGenItem1"  key="" text="Bill Payement" />
+                             <core:Item id="_IDGenItem4"  key="" text="Loan Repayment" />
+                            <core:Item id="_IDGenItem5"  key="" text="Tax Payment" />
+                            <core:Item id="_IDGenItem7"  key="" text="Donation" />
+                            <core:Item id="_IDGenItem8"  key="" text="Money Transfer" />
+                    </ComboBox>
+               </HBox>
+                <HBox id="_IDGenHBox54"  class="sapUiSmallMarginTop" alignItems="Center">
+                    <Label id="_IDGenLabel25"  text="Transaction Category" width="290px"  required="true"></Label>
+                     <ComboBox id="_IDGenComboBox5"  placeholder="Category"   selectedKey="selectedCategory" required="true">
+                            <core:Item id="_IDGenItem12"   key="" text="Utilities" />
+                            <core:Item id="_IDGenItem13"   key="" text="Rent And Lease" />
+                            <core:Item id="_IDGenItem14"   key="" text="Procurement" />
+                            <core:Item id="_IDGenItem15"   key="" text="Travel And Lodging" />
+                            <core:Item id="_IDGenItem16"   key="" text="Loan And Interest" />
+                            <core:Item id="_IDGenItem17"   key="" text="Insurance" />
+                    </ComboBox>
                </HBox>
 
                 <HBox id="_IDGenHBox33" class="sapUiSmallMarginTop sapUiLargeMarginBottom" alignItems="Center">
