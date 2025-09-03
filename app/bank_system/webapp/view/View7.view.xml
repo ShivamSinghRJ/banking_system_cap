@@ -45,20 +45,20 @@
 
                 <HBox id="_IDGenHBox37"  class="sapUiSmallMarginTop" alignItems="Center">
                     <Label id="_IDGenLabel12" text="Recipient's Bank Account Number" width="290px"></Label>
-                    <Input id="_IDGenInput18" type="Number" maxLength="16"  required="true" ></Input>
+                    <Input id="_IDGenInput18" type="Number" maxLength="16"  required="true"></Input>
                 </HBox>
 
                  <HBox id="_IDGenHBox38"  class="sapUiSmallMarginTop" alignItems="Center">
                     <Label id="_IDGenLabel13" text="Expire Date" width="290px"></Label>
-                    <Input id="_IDGenInput19" type="Number" maxLength="16"  required="true" ></Input>
+                    <DatePicker id="_IDGenInput19" required="true" width="176px" ></DatePicker>
                 </HBox>
 
                 <HBox id="_IDGenHBox39"  class="sapUiSmallMarginTop sapUiLargeMarginBottom" alignItems="Center">
                     <Label id="_IDGenLabel14" text="Bank Name" width="290px"></Label>
-                    <Input id="_IDGenInput20" type="Number" maxLength="16"  required="true" ></Input>
+                    <Input id="_IDGenInput20" type="Text" maxLength="16"  required="true" ></Input>
                 </HBox>
 
-                <Button id="_IDGenButton33"  text="Transfer Funds" type="Emphasized" width="50%" class="sapUiLargeMarginStart" ></Button>
+                <Button id="_IDGenButton33"  text="Add Bank" type="Emphasized" width="50%" class="sapUiLargeMarginStart" press="addBank" ></Button>
 
                
             </VBox>
@@ -70,8 +70,8 @@
                 <HBox id="_IDGenHBox40">
                     <Avatar id="_IDGenAvatar5" displayShape="Circle" initials="SK" displaySize="XS" tooltip="Profile Avatar" class="sapUiTinyMarginEnd avt2" />
                     <VBox id="_IDGenVBox48">
-                    <Title id="_IDGenTitle21" text="Shivam Kumar" level="H3" class="tit1" />
-                    <Text id="_IDGenText51" text="shivam.t.kumar@capgemini.com" class="txt3" />
+                    <Title id="_IDGenTitle21" text="" level="H3" class="tit1" />
+                    <Text id="_IDGenText51" text="" class="txt3" />
                     </VBox>
                 </HBox>
                 </content>
