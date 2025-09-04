@@ -87,6 +87,9 @@ sap.ui.define([
               this.getView().byId("_IDGenText22").setText(str);
               this.getView().byId("_IDGenLabel").setText("$ "+tAmunt);
 
+              this.getView().byId("_IDGenLabel29").setText(aFiltered[0].expire_date);
+              this.getView().byId("_IDGenLabel28").setText(aFiltered[0].card_number);
+              this.getView().byId("_IDGenLabel27").setText(aFiltered[0].bank_name);
               debugger;
               var oJSONModel = new JSONModel(aFiltered);
               this.getView().setModel(oJSONModel, "BankModel");

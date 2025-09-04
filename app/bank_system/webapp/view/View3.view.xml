@@ -153,10 +153,10 @@
             <Panel id="_IDGenPanel1" class="pnl1" width="350px" >
 
                     <VBox id="_IDGenVBox55"  width="100%" height="150px" class="vbbb">
-                        <Label id="_IDGenLabel27" class="labeldes1 sapUiSmallMarginBottom sapUiTinyMarginTop" text="HDFC" design="Bold"></Label>
-                        <Label id="_IDGenLabel28" text="1234567891234567" class="lab2" width="250px" design="Bold"></Label>
+                        <Label id="_IDGenLabel27" class="labeldes1 sapUiSmallMarginBottom sapUiTinyMarginTop" text="" design="Bold"></Label>
+                        <Label id="_IDGenLabel28" text="" class="lab2" width="250px" design="Bold"></Label>
                        
-                        <Label id="_IDGenLabel29" text="19/09/9876" width="250px" class="lab3 sapUiLargeMarginStart"></Label>
+                        <Label id="_IDGenLabel29" text="" width="250px" class="lab3 sapUiLargeMarginStart"></Label>
                            
                     </VBox>
             </Panel>
