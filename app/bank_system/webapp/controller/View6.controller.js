@@ -22,6 +22,33 @@ sap.ui.define([
         _onRouteMatched: function (oEvent) {
             mail = oEvent.getParameter("arguments").email;
             this.getView().byId("_IDGenInput13").setValue(mail);
+
+             var oModel = this.getView().getModel(); // OData V4 model
+            var oBinding = oModel.bindList("/People");
+            oBinding.requestContexts(0, 100).then(function (aContexts) {
+               var aAllData = aContexts.map(function (oContext) {
+                   return oContext.getObject();
+               });
+
+               var aFiltered = aAllData.filter(function (entry) {
+                return entry.email === mail;
+              });
+            //   data = aFiltered;
+              debugger;
+              
+              var initial = aFiltered[0].First_name.charAt(0) + aFiltered[0].Last_name.charAt(0);
+              this.getView().byId("_IDGenAvatar4").setInitials(initial);
+
+            // If _IDGenTitle21 is a Text or Label control
+            this.getView().byId("_IDGenText45").setText(mail);
+            this.getView().byId("_IDGenTitle17").setText( aFiltered[0].name);
+
+             }.bind(this)).catch(function (oError) {
+              console.error("Error loading data:", oError);
+         });
+
+
+
           
         },
         bankDetails:function(){

@@ -1,0 +1,45 @@
+<mvc:View controllerName="banksystem.controller.View9"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m"
+    xmlns:viz="sap.viz.ui5.controls"
+    xmlns:viz.data="sap.viz.ui5.data"
+    xmlns:viz.feeds="sap.viz.ui5.controls.common.feeds">
+    <Page id="page9" title="{i18n>title}">
+
+
+    <Panel id="_IDGenPanel2" height="50%" width="50%" >
+
+             <!-- <viz:VizFrame id="idVizFrame2" uiConfig="{applicationSet:'fiori'}"
+                height='100%' width="100%" vizType='donut'>
+                <viz:dataset>
+                    <viz.data:FlattenedDataset id="_IDGenFlattenedDataset2" data="{/BankModel}">
+                        <viz.data:dimensions>
+                            <viz.data:DimensionDefinition id="_IDGenDimensionDefinition2" name="Store Name"
+                                value="{bank_name}" />
+                        </viz.data:dimensions>
+                        <viz.data:measures>
+                            <viz.data:MeasureDefinition id="_IDGenMeasureDefinition2" name="Amount"
+                                value="{amount}" />
+                        </viz.data:measures>
+                    </viz.data:FlattenedDataset>
+                </viz:dataset>
+
+                <viz:feeds>
+                    <viz.feeds:FeedItem id="_IDGenFeedItem" uid="size" type="Measure"
+                        values="Amount" />
+                    <viz.feeds:FeedItem id="_IDGenFeedItem1" uid="color" type="Dimension"
+                        values="Store Name" />
+                </viz:feeds>
+                <viz:dependents>
+                    <viz:Popover id="idPopOver"></viz:Popover>
+                </viz:dependents>
+            </viz:VizFrame> -->
+        
+
+    </Panel>
+
+     
+
+
+    </Page>
+</mvc:View>

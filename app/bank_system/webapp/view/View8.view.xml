@@ -13,7 +13,7 @@
                 <Title id="_IDGenTitle22" class="txt0" text="Horizon" level="H1" />
                 </HBox>
 
-                <SearchField id="_IDGenSearchField5" width="80%" class="sapUiSmallMargin" placeholder="Search" />
+                <!-- <SearchField id="_IDGenSearchField5" width="80%" class="sapUiSmallMargin" placeholder="Search" /> -->
 
                 <VBox id="_IDGenVBox50">
                 <Button id="_IDGenButton35" text="Home" icon="sap-icon://home" type="Transparent" textDirection="LTR" width="45%" class="btn0" press="home" />
@@ -21,7 +21,7 @@
                 <Button id="_IDGenButton37" text="Transaction History" icon="sap-icon://home" type="Transparent" width="75%" press="history" class="btn0" />
                 <Button id="_IDGenButton38" text="Payment Transfer" icon="sap-icon://home" type="Transparent" width="71%" class="btn0" press="paymentTranfer" />
                 <Button id="_IDGenButton39" text="Connect Bank" icon="sap-icon://home" type="Transparent" width="62%" class="btn0" press="connectBank" />
-                <Button id="_IDGenButton40"   text="Add Money" icon="sap-icon://home" type="Emphasized" width="56%"  class="btn0"></Button>
+                <Button id="_IDGenButton40"   text="Add Money" icon="sap-icon://home" type="Emphasized" width="56%"  class="btn0 "></Button>
                     
                 </VBox>
             </VBox>

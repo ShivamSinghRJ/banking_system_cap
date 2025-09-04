@@ -1,7 +1,8 @@
 sap.ui.define([
     "sap/ui/core/mvc/Controller",
-    "sap/ui/model/json/JSONModel"
-], (Controller,JSONModel) => {
+    "sap/ui/model/json/JSONModel",
+    "sap/m/MessageBox"
+], (Controller,JSONModel,MessageBox) => {
     "use strict";
     var mail;
     var data;
@@ -53,8 +54,30 @@ sap.ui.define([
 
          addBank:function(){
             var bankAccNo = this.getView().byId("_IDGenInput18").getValue();
-            var expDate = this.getView().byId("_IDGenInput19").getDateValue().toLocaleDateString('en-CA');
+            var expDate = this.getView().byId("_IDGenInput19").getDateValue();
             var bankName = this.getView().byId("_IDGenInput20").getValue();
+
+            if(!bankAccNo || !expDate || !bankName){
+                 MessageBox.warning("Fill all data!!!");
+                    return;
+            }
+
+            if(bankAccNo.length != 16){
+                MessageBox.warning("Fill cotrrect Account Number!!!");
+                    return;
+            }
+
+            var oDateFormat = sap.ui.core.format.DateFormat.getDateInstance({ pattern: "yyyy-MM-dd" });
+            var today = new Date();
+            var formattedDate = oDateFormat.format(today); // Example: "2025-09-04"
+            debugger;
+                if(expDate){
+                    expDate = expDate.toLocaleDateString('en-CA');
+                    if(expDate < formattedDate){
+                        MessageBox.warning("Fill correct date!!!");
+                        return;
+                    }
+                }
 
 
             const newEntry = {

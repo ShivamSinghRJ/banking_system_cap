@@ -13,7 +13,7 @@
             <Title id="_IDGenTitle8" class="txt0" text="Horizon" level="H1" />
             </HBox>
 
-            <SearchField id="_IDGenSearchField1" width="80%" class="sapUiSmallMargin" placeholder="Search" />
+            <!-- <SearchField id="_IDGenSearchField1" width="80%" class="sapUiSmallMargin" placeholder="Search" /> -->
 
             <VBox id="_IDGenVBox30">
             <Button id="_IDGenButton7" text="Home" icon="sap-icon://home" type="Transparent" textDirection="LTR" width="45%" class="btn0" press="home" />
@@ -21,7 +21,7 @@
             <Button id="_IDGenButton14" text="Transaction History" icon="sap-icon://home" type="Transparent" width="75%" press="history" class="btn0" />
             <Button id="_IDGenButton15" text="Payment Transfer" icon="sap-icon://home" type="Transparent" width="71%" class="btn0" press="paymentTranfer" />
             <Button id="_IDGenButton16" text="Connect Bank" icon="sap-icon://home" type="Transparent" width="62%" class="btn0" press="connectBank" />
-            <Button id="_IDGenButton43"  text="Add money" icon="sap-icon://home" type="Transparent" width="62%" class="btn0" press="addMoney" />
+            <Button id="_IDGenButton43"  text="Add money" icon="sap-icon://home" type="Transparent" width="56%" class="btn0" press="addMoney" />
             </VBox>
         </VBox>
 
@@ -65,10 +65,10 @@
         <Toolbar id="_IDGenToolbar3" width="260px" design="Transparent">
             <content>
             <HBox id="_IDGenHBox24">
-                <Avatar id="_IDGenAvatar3" displayShape="Circle" initials="SK" displaySize="XS" tooltip="Profile Avatar" class="sapUiTinyMarginEnd avt2" />
+                <Avatar id="_IDGenAvatar3" displayShape="Circle" initials="" displaySize="XS" tooltip="Profile Avatar" class="sapUiTinyMarginEnd avt2" />
                 <VBox id="_IDGenVBox36">
-                <Title id="_IDGenTitle13" text="Shivam Kumar" level="H3" class="tit1" />
-                <Text id="_IDGenText46" text="shivam.t.kumar@capgemini.com" class="txt3" />
+                <Title id="_IDGenTitle13" text="" level="H3" class="tit1" />
+                <Text id="_IDGenText46" text="" class="txt3" />
                 </VBox>
             </HBox>
             </content>

@@ -10,7 +10,7 @@
                 <Title id="_IDGenTitle15" class="txt0" text="Horizon" level="H1" />
                 </HBox>
 
-                <SearchField id="_IDGenSearchField3" width="80%" class="sapUiSmallMargin" placeholder="Search" />
+                <!-- <SearchField id="_IDGenSearchField3" width="80%" class="sapUiSmallMargin" placeholder="Search" /> -->
 
                 <VBox id="_IDGenVBox40" class="sapUiSmallMarginStart">
                 <Button id="_IDGenButton22" text="Home" icon="sap-icon://home" type="Transparent" textDirection="LTR" width="45%" class="btn0" press="home" />
@@ -114,10 +114,10 @@
             <Toolbar id="_IDGenToolbar5" width="260px" design="Transparent">
                 <content>
                 <HBox id="_IDGenHBox29">
-                    <Avatar id="_IDGenAvatar4" displayShape="Circle" initials="SK" displaySize="XS" tooltip="Profile Avatar" class="sapUiTinyMarginEnd avt2" />
+                    <Avatar id="_IDGenAvatar4" displayShape="Circle" initials="" displaySize="XS" tooltip="Profile Avatar" class="sapUiTinyMarginEnd avt2" />
                     <VBox id="_IDGenVBox43">
-                    <Title id="_IDGenTitle17" text="Shivam Kumar" level="H3" class="tit1" />
-                    <Text id="_IDGenText45" text="shivam.t.kumar@capgemini.com" class="txt3" />
+                    <Title id="_IDGenTitle17" text="" level="H3" class="tit1" />
+                    <Text id="_IDGenText45" text="" class="txt3" />
                     </VBox>
                 </HBox>
                 </content>

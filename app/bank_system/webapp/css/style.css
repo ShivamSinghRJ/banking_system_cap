@@ -45,7 +45,7 @@
 }
 
 .hbox2{
-    background-image: url('https://www.etg.solutions/wp-content/uploads/2018/03/atm-banner.jpg');
+    background-image: url('https://cdn.wallpapersafari.com/36/63/aVyTFU.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -55,6 +55,35 @@
 }
 
 
+
+.vbbb{
+    background-image: url('https://cdn.wallpapersafari.com/36/63/aVyTFU.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 5%;
+}
+
+
 .btn0{
     margin-left: 10px;
+}
+
+.labeldes1{
+    font-size: xx-large; 
+    font-style: italic;
+    margin-left: 40px;
+}
+
+
+.lab2{
+    font-size: x-large;
+    margin-left: 27px;
+    font-family: math;
+}
+
+.lab3{
+    font-size: medium;
+    font-family: cursive;
+    margin-left: 83px;
 }

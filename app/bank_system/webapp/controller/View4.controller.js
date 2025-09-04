@@ -16,11 +16,13 @@ sap.ui.define([
           this.getOwnerComponent().getRouter()
         .getRoute("RouteView4")
         .attachPatternMatched(this._onRouteMatched, this);
+
+          this.updateInf();
               
         },
         _onRouteMatched: function (oEvent) {
           mail = oEvent.getParameter("arguments").email;
-          debugger;
+          
 
           var oModel = this.getView().getModel(); // OData V4 model
           var oBinding = oModel.bindList("/Bank");
@@ -65,6 +67,31 @@ sap.ui.define([
           this.getOwnerComponent().getRouter().navTo("RouteView8",{
                 email : mail
             });
+        },
+        updateInf:function(){
+          var oModel = this.getView().getModel(); // OData V4 model
+            var oBinding = oModel.bindList("/People");
+            oBinding.requestContexts(0, 100).then(function (aContexts) {
+               var aAllData = aContexts.map(function (oContext) {
+                   return oContext.getObject();
+               });
+
+               var aFiltered = aAllData.filter(function (entry) {
+                return entry.email === mail;
+              });
+
+              var initial = aFiltered[0].First_name.charAt(0) + aFiltered[0].Last_name.charAt(0);
+              this.getView().byId("_IDGenAvatar3").setInitials(initial);
+              
+
+            // If _IDGenTitle21 is a Text or Label control
+            this.getView().byId("_IDGenText46").setText(mail);
+            this.getView().byId("_IDGenTitle13").setText( aFiltered[0].name);
+             
+            
+         }.bind(this)).catch(function (oError) {
+              console.error("Error loading data:", oError);
+         });
         }
     });
 });

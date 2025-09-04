@@ -1,8 +1,9 @@
 sap.ui.define([
     "sap/ui/core/mvc/Controller",
     "sap/ui/model/json/JSONModel",
-    "sap/m/MessageBox"
-], (Controller,JSONModel,MessageBox) => {
+    "sap/m/MessageBox",
+    'sap/m/MessageToast'
+], (Controller,JSONModel,MessageBox,MessageToast) => {
     "use strict";
     var mail;
     var data,bankData;
@@ -76,24 +77,19 @@ sap.ui.define([
 
 
         AddMonaeyToBank:function(){
-           
-            try{
 
-                var bank =  this.byId("_IDGenComboBox3").getSelectedItem().getText();
+                var bank =  this.byId("_IDGenComboBox3").getSelectedKey();
                 var msg = this.getView().byId("_IDGenTextArea1").getValue();
-                var accNumber =  this.byId("_IDGenComboBox6").getSelectedItem().getText();
+                var accNumber =  this.byId("_IDGenComboBox6").getSelectedKey();
                 var amount = this.getView().byId("_IDGenInput23").getValue();
-
-                if(bank === undefined || accNumber == undefined || amount == undefined){
+                
+                if(!bank || !accNumber || !amount){
                     debugger;
                     MessageBox.warning("Fill all data!!!");
                     return;
                 }
-                debugger;
-            }catch(err){
-                
-            }
-           debugger;
+         
+          
 
             var FilteredData = bankData.filter(function (entry) {
                 return entry.email === mail && entry.bank_name === bank && entry.card_number === accNumber;
@@ -136,7 +132,8 @@ sap.ui.define([
                          var msg4 = this.getView().byId("_IDGenMessageStrip10").setVisible(true);
                             setTimeout(function() {
                                 msg4.setVisible(false);
-                            }, 2000);
+                            }, 5000);
+                    return;
 
             }
 

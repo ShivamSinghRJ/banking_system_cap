@@ -4,7 +4,12 @@
     xmlns="sap.m"
     xmlns:tnt="sap.tnt"
     xmlns:table="sap.ui.table" 
-    xmlns:core="sap.ui.core">
+    xmlns:core="sap.ui.core"
+    xmlns:layout="sap.ui.layout"
+    xmlns:viz="sap.viz.ui5.controls"
+    xmlns:viz.data="sap.viz.ui5.data"
+    xmlns:viz.feeds="sap.viz.ui5.controls.common.feeds"
+>
     <Page id="page3" title="{i18n>title}" showHeader="false" >
 
         <HBox id="_IDGenHBox13" >
@@ -15,7 +20,7 @@
                         <Image id="_IDGenImage2"  class="sapUiTinyMarginEnd" src="image/cube.png" width="40px" height="40px"></Image>
                         <Title id="_IDGenTitle4"  class="txt0" text="Horizon" level="H1"></Title>
                 </HBox>
-                <SearchField id="_IDGenSearchField" width="80%" class="sapUiSmallMargin" placeholder="Search" />
+                <!-- <SearchField id="_IDGenSearchField" width="80%" class="sapUiSmallMargin" placeholder="Search" /> -->
                
             
 
@@ -37,7 +42,7 @@
             </VBox>
 
             <VBox id="_IDGenVBox22" width="55%" class="sapUiTinyMarginEnd">
-            <HBox id="_IDGenHBox16" class="sapUiLargeMarginTop">
+            <HBox id="_IDGenHBox16" class="sapUiSmallMarginTop">
                 <Title id="_IDGenTitle6" text="Welcome" level="H1" class="sapUiSmallMarginEnd"></Title>
                  <Title id="_IDGenTitle7" text="{MasterModel>/0/First_name}" level="H1" ></Title>
             </HBox>
@@ -45,16 +50,49 @@
 
                  <Panel id="_IDGenPanel" class="sapUiSmallMarginBottom" >
                     <HBox id="_IDGenHBox17" >
-                       
-                        <core:Icon id="_IDGenIcon" src="sap-icon://pie-chart" size="500%" class="sapUiLargeMarginEnd" color="blue"></core:Icon>
+
+                          <Panel id="_IDGenPanel3" height="180px" width="470px">
+                          
+                           <viz:VizFrame id="idVizFrame2" uiConfig="{applicationSet:'fiori'}"
+                                    height='100%' width="100%" vizType='donut'>
+                                    <viz:dataset>
+                                        <viz.data:FlattenedDataset id="_IDGenFlattenedDataset2" data="{BankModel>/}">
+                                            <viz.data:dimensions>
+                                                <viz.data:DimensionDefinition id="_IDGenDimensionDefinition2" name="Store Name"
+                                                    value="{BankModel>bank_name}" />
+                                            </viz.data:dimensions>
+                                            <viz.data:measures>
+                                                <viz.data:MeasureDefinition id="_IDGenMeasureDefinition2" name="Amount"
+                                                    value="{BankModel>amount}" />
+                                            </viz.data:measures>
+                                        </viz.data:FlattenedDataset>
+                                    </viz:dataset>
+
+                                    <viz:feeds>
+                                        <viz.feeds:FeedItem id="_IDGenFeedItem" uid="size" type="Measure"
+                                            values="Amount" />
+                                        <viz.feeds:FeedItem id="_IDGenFeedItem1" uid="color" type="Dimension"
+                                            values="Store Name" />
+                                    </viz:feeds>
+                                    <viz:dependents>
+                                        <viz:Popover id="idPopOver"></viz:Popover>
+                                    </viz:dependents>
+                                </viz:VizFrame>
+                          
+                          
+                          
+                          </Panel>
+
+
+
                         <VBox id="_IDGenVBox25"  class="sapUiLargeMarginEnd">
-                            <Text id="_IDGenText22" text="{BankModel>/bankCount} Banks Accounts" width="100%" class="sapUiSmallMarginBottom"></Text>
+                            <Text id="_IDGenText22" text="" width="100%" class="sapUiSmallMarginBottom"></Text>
                             <Text id="_IDGenText23" text="Total Current Balance"></Text>
-                            <Label id="_IDGenLabel" text="$ {BankModel>/totalMoney}" design="Bold"></Label>
+                            <Label id="_IDGenLabel" text="" design="Bold"></Label>
                         </VBox>
 
                         <FlexBox id="_IDGenFlexBox" width="42%" justifyContent="End">
-                        <Link id="_IDGenLink" text="+ Add bank" href="" press="" class="link1"></Link>
+                        <Link id="_IDGenLink" text="+ Add bank" href="" press="connectBank" class="link1"></Link>
                         </FlexBox>
                     </HBox>
                  </Panel>
@@ -93,13 +131,12 @@
                             </Table>
                         
                     </VBox>
-            
-            
+
             
             </VBox>
 
             <VBox id="_IDGenVBox23"  width="25%" class="sapUiSmallMarginBottom">
-            <VBox id="_IDGenVBox24" class="vbox0" alignItems="Start" justifyContent="End" width="100%" height="40%" >
+            <VBox id="_IDGenVBox24" class="vbox0" alignItems="Start" justifyContent="End" width="100%" height="30%" >
              <Avatar id="_IDGenAvatar" displayShape="Circle" initials="SK" displaySize="M" tooltip="Profile Avatar" class="avt1"> </Avatar>
             </VBox>
 
@@ -108,11 +145,18 @@
 
             <HBox id="_IDGenHBox15" alignItems="Center" justifyContent="SpaceBetween" >
                 <Text id="_IDGenText20" text="My Bank"></Text>
-                <Button id="_IDGenButton6" text="+ Add bank" type="Transparent" press="onPress"></Button>
+                <Button id="_IDGenButton6" text="+ Add bank" type="Transparent" press="connectBank"></Button>
             </HBox>
 
-            <Panel id="_IDGenPanel1" >
-                <Image id="_IDGenImage3" src="image/images.jpg" width="100%"></Image>
+            <Panel id="_IDGenPanel1" class="pnl1" width="350px" >
+
+                    <VBox id="_IDGenVBox55"  width="100%" height="150px" class="vbbb">
+                        <Label id="_IDGenLabel27" class="labeldes1 sapUiSmallMarginBottom sapUiTinyMarginTop" text="HDFC" design="Bold"></Label>
+                        <Label id="_IDGenLabel28" text="1234567891234567" class="lab2" width="250px" design="Bold"></Label>
+                       
+                        <Label id="_IDGenLabel29" text="19/09/9876" width="250px" class="lab3 sapUiLargeMarginStart"></Label>
+                           
+                    </VBox>
             </Panel>
 
        

@@ -11,6 +11,7 @@ sap.ui.define([
                 serviceUrl: "/admin/"
               });
               this.getView().setModel(oModel);
+            //   oModel.refresh(true);
 
               this.getOwnerComponent().getRouter()
             .getRoute("RouteView3")
@@ -19,11 +20,28 @@ sap.ui.define([
 
             this.bankDetails();
             this.transactionDetails();
+
+
+
+
+            var oVizFrame = this.getView().byId("idVizFrame2");
+            var oPopOver = this.getView().byId("idPopOver");
+            oPopOver.connect(oVizFrame.getVizUid());
+
+            oVizFrame.setVizProperties({
+                // legend: {
+                //     visible: false
+                // },
+                title: {
+                    visible: false
+                }
+            });
         },
         _onRouteMatched: function (oEvent) {
             mail = oEvent.getParameter("arguments").email;
           
             var oModel = this.getView().getModel(); // OData V4 model
+            oModel.refresh(true);
             var oBinding = oModel.bindList("/People");
             oBinding.requestContexts(0, 100).then(function (aContexts) {
                var aAllData = aContexts.map(function (oContext) {
@@ -64,10 +82,15 @@ sap.ui.define([
                     tAmunt +=parseFloat(aFiltered[i].amount);
               }
              
+              var str= aFiltered.length + " Banks Accounts";
+              
+              this.getView().byId("_IDGenText22").setText(str);
+              this.getView().byId("_IDGenLabel").setText("$ "+tAmunt);
+
+              debugger;
               var oJSONModel = new JSONModel(aFiltered);
               this.getView().setModel(oJSONModel, "BankModel");
-            this.getView().getModel("BankModel").setProperty("/bankCount", aFiltered.length);
-            this.getView().getModel("BankModel").setProperty("/totalMoney", tAmunt);
+           
             
            
 
@@ -118,6 +141,29 @@ sap.ui.define([
             this.getOwnerComponent().getRouter().navTo("RouteView8",{
                 email : mail
             });
+        },
+
+        test:function(){
+            this.getOwnerComponent().getRouter().navTo("RouteView9",{
+                email : mail
+            });
+        },
+        onBankChange:function(){
+            debugger;
+
+            var sQuery = this.getView().byId("_IDGenComboBox").getSelectedKey();
+
+             let oTable = this.getView().byId("_IDGenTable");  //Calling the View and Table with ID
+            let oBinding = oTable.getBinding("items"); //we are getting the table binding items
+
+            if(sQuery){
+                let oFilter = new sap.ui.model.Filter([
+                    new sap.ui.model.Filter("bank_name", sap.ui.model.FilterOperator.Contains, sQuery)
+                    ], false);   //FALSE refers to OR condition operator
+                oBinding.filter([oFilter]);  //Apply the filter
+                } else {
+                    oBinding.filter([]); // Clear the filter when input is empty
+                }
         }
 
 

@@ -48,7 +48,8 @@
       "minUI5Version": "1.138.0",
       "libs": {
         "sap.m": {},
-        "sap.ui.core": {}
+        "sap.ui.core": {},
+        "sap.viz": {}
       }
     },
     "contentDensities": {
@@ -147,6 +148,13 @@
           "target": [
             "TargetView8"
           ]
+        },
+        {
+          "name": "RouteView9",
+          "pattern": "View9/{email}",
+          "target": [
+            "TargetView9"
+          ]
         }
       ],
       "targets": {
@@ -181,6 +189,10 @@
         "TargetView8": {
           "id": "View8",
           "name": "View8"
+        },
+        "TargetView9": {
+          "id": "View9",
+          "name": "View9"
         }
       }
     },
