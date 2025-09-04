@@ -41,7 +41,7 @@ sap.ui.define([
             mail = oEvent.getParameter("arguments").email;
           
             var oModel = this.getView().getModel(); // OData V4 model
-            oModel.refresh(true);
+           
             var oBinding = oModel.bindList("/People");
             oBinding.requestContexts(0, 100).then(function (aContexts) {
                var aAllData = aContexts.map(function (oContext) {

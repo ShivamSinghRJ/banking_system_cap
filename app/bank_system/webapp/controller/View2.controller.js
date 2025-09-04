@@ -10,7 +10,7 @@ sap.ui.define([
                 serviceUrl: "/admin/"
               });
               this.getView().setModel(oModel);
-              oModel.refresh(true);
+             
         },
         login:function(){
             this.getOwnerComponent().getRouter().navTo("RouteView1");
