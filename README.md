@@ -1,25 +1,43 @@
-# Getting Started
-
-Welcome to your new project.
-
-It contains these folders and files, following our recommended project layout:
-
-File or Folder | Purpose
----------|----------
-`app/` | content for UI frontends goes here
-`db/` | your domain models and data go here
-`srv/` | your service models and code go here
-`package.json` | project metadata and configuration
-`readme.md` | this getting started guide
+Banking System – Built with SAP CAP
+This project is a full-stack banking application developed using the SAP Cloud Application Programming Model (CAP). It simulates a real-world banking workflow with secure login, user onboarding, and interactive dashboards.
 
 
-## Next Steps
-
-- Open a new terminal and run `cds watch`
-- (in VS Code simply choose _**Terminal** > Run Task > cds watch_)
-- Start adding content, for example, a [db/schema.cds](db/schema.cds).
+Login Page....
+![image_alt](https://github.com/ShivamSinghRJ/banking_system_cap/blob/0c94c2701be029368827e703a1860b7bde3f88cb/1.png)
 
 
-## Learn More
 
-Learn more at https://cap.cloud.sap/docs/get-started/.
+Sign-Up page....
+![image_alt](https://github.com/ShivamSinghRJ/banking_system_cap/blob/0c94c2701be029368827e703a1860b7bde3f88cb/2.png)
+
+
+
+Home Page....
+![image_alt](https://github.com/ShivamSinghRJ/banking_system_cap/blob/0c94c2701be029368827e703a1860b7bde3f88cb/3.png)
+
+
+
+All cards page....
+![image_alt](https://github.com/ShivamSinghRJ/banking_system_cap/blob/0c94c2701be029368827e703a1860b7bde3f88cb/4.png)
+
+
+
+Transaction History page ....
+![image_alt](https://github.com/ShivamSinghRJ/banking_system_cap/blob/0c94c2701be029368827e703a1860b7bde3f88cb/5.png)
+
+
+
+Payment Transfer page ....
+![image_alt](https://github.com/ShivamSinghRJ/banking_system_cap/blob/0c94c2701be029368827e703a1860b7bde3f88cb/6.png)
+
+
+
+Add ATM Card page....
+![image_alt](https://github.com/ShivamSinghRJ/banking_system_cap/blob/0c94c2701be029368827e703a1860b7bde3f88cb/7.png)
+
+
+
+Add Money to your account page .....
+![image_alt](https://github.com/ShivamSinghRJ/banking_system_cap/blob/0c94c2701be029368827e703a1860b7bde3f88cb/8.png)
+
+
