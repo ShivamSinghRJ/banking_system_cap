@@ -13,31 +13,31 @@ Sign-Up page....
 
 
 Home Page....
-![image_alt](https://github.com/ShivamSinghRJ/banking_system_cap/blob/0c94c2701be029368827e703a1860b7bde3f88cb/3.png)
+![image_alt](https://github.com/ShivamSinghRJ/banking_system_cap/blob/ac567fc1c4e578b07db6736f3c69fa53511053a2/3.png)
 
 
 
 All cards page....
-![image_alt](https://github.com/ShivamSinghRJ/banking_system_cap/blob/0c94c2701be029368827e703a1860b7bde3f88cb/4.png)
+![image_alt](https://github.com/ShivamSinghRJ/banking_system_cap/blob/ac567fc1c4e578b07db6736f3c69fa53511053a2/4.png)
 
 
 
 Transaction History page ....
-![image_alt](https://github.com/ShivamSinghRJ/banking_system_cap/blob/0c94c2701be029368827e703a1860b7bde3f88cb/5.png)
+![image_alt](https://github.com/ShivamSinghRJ/banking_system_cap/blob/ac567fc1c4e578b07db6736f3c69fa53511053a2/5.png)
 
 
 
 Payment Transfer page ....
-![image_alt](https://github.com/ShivamSinghRJ/banking_system_cap/blob/0c94c2701be029368827e703a1860b7bde3f88cb/6.png)
+![image_alt](https://github.com/ShivamSinghRJ/banking_system_cap/blob/ac567fc1c4e578b07db6736f3c69fa53511053a2/6.png)
 
 
 
 Add ATM Card page....
-![image_alt](https://github.com/ShivamSinghRJ/banking_system_cap/blob/0c94c2701be029368827e703a1860b7bde3f88cb/7.png)
+![image_alt](https://github.com/ShivamSinghRJ/banking_system_cap/blob/ac567fc1c4e578b07db6736f3c69fa53511053a2/7.png)
 
 
 
 Add Money to your account page .....
-![image_alt](https://github.com/ShivamSinghRJ/banking_system_cap/blob/0c94c2701be029368827e703a1860b7bde3f88cb/8.png)
+![image_alt](https://github.com/ShivamSinghRJ/banking_system_cap/blob/ac567fc1c4e578b07db6736f3c69fa53511053a2/8.png)
 
 
